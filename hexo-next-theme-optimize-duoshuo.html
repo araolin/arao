@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/araome/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/araome/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/araome/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/araome/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/araome/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/araome/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/araome/',
+    scheme: 'Muse',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="下面简单介绍如何给你的Hexo站点添加最近访客，不仅限hexo的网站，其他如wordpress,typecho,emlog等也是可以参考的。  引入多说通用JS代码注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的NexT主题创建“留言”页面实现指定某些页面添加多说评论系统。">
+<meta name="keywords" content="hexo,hexo最近访客,typecho,多说">
+<meta property="og:type" content="website">
+<meta property="og:title" content="动动手指，给你的Hexo站点添加最近访客（多说篇）">
+<meta property="og:url" content="http://araolin.coding.me/hexo-next-theme-optimize-duoshuo.html">
+<meta property="og:site_name" content="ARAO&#39;S BLOG">
+<meta property="og:description" content="下面简单介绍如何给你的Hexo站点添加最近访客，不仅限hexo的网站，其他如wordpress,typecho,emlog等也是可以参考的。  引入多说通用JS代码注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的NexT主题创建“留言”页面实现指定某些页面添加多说评论系统。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://araolin.coding.me/2015/06/hexo-duoshuo-set.jpg">
+<meta property="og:image" content="http://araolin.coding.me/2015/06/guestbook-index-md.jpg">
+<meta property="og:image" content="http://araolin.coding.me/2015/06/duoshuo-css-f12.jpg">
+<meta property="og:updated_time" content="2019-06-14T18:51:31.630Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动动手指，给你的Hexo站点添加最近访客（多说篇）">
+<meta name="twitter:description" content="下面简单介绍如何给你的Hexo站点添加最近访客，不仅限hexo的网站，其他如wordpress,typecho,emlog等也是可以参考的。  引入多说通用JS代码注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的NexT主题创建“留言”页面实现指定某些页面添加多说评论系统。">
+<meta name="twitter:image" content="http://araolin.coding.me/2015/06/hexo-duoshuo-set.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://araolin.coding.me/hexo-next-theme-optimize-duoshuo">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>动动手指，给你的Hexo站点添加最近访客（多说篇） | ARAO'S BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/araome/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ARAO'S BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">我们的征途是星辰大海</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/araome/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/araome/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">动动手指，给你的Hexo站点添加最近访客（多说篇）
+
+</h1>
+
+<div class="post-meta">
+  
+  
+
+
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p><img src="/2015/06/hexo-duoshuo-set.jpg" alt="多说自定义css和hexo最近访客"></p>
+<blockquote>
+<p>下面简单介绍如何给你的Hexo站点添加最近访客，不仅限<a href="http://www.arao.me/tags/hexo/" target="_blank" rel="noopener">hexo</a>的网站，其他如wordpress,<a href="http://www.arao.me/tags/typecho/" target="_blank" rel="noopener">typecho</a>,emlog等也是可以参考的。</p>
+</blockquote>
+<h3 id="引入多说通用JS代码"><a href="#引入多说通用JS代码" class="headerlink" title="引入多说通用JS代码"></a>引入多说通用JS代码</h3><p>注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的<a href="http://www.arao.me/2015/hexo-next-theme-optimize-base/#NexT主题创建_“留言”_页面" target="_blank" rel="noopener">NexT主题创建“留言”页面</a>实现指定某些页面添加多说评论系统。</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--多说js加载开始，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var duoshuoQuery = &#123;short_name:&quot;您的多说二级域名&quot;&#125;;</span><br><span class="line">(function() &#123;</span><br><span class="line">    var ds = document.createElement(&apos;script&apos;);</span><br><span class="line">    ds.type = &apos;text/javascript&apos;;ds.async = true;</span><br><span class="line">    ds.src = &apos;http://static.duoshuo.com/embed.js&apos;;</span><br><span class="line">    ds.charset = &apos;UTF-8&apos;;</span><br><span class="line">    (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;!--多说js加载结束，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="往你想添加的页面增加下面的一小段代码即可。"><a href="#往你想添加的页面增加下面的一小段代码即可。" class="headerlink" title="往你想添加的页面增加下面的一小段代码即可。"></a>往你想添加的页面增加下面的一小段代码即可。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;28&quot; data-avatar-size=&quot;42&quot; id=&quot;ds-recent-visitors&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class=“ds-recent-visitors”    //指定显示最近访客容器</span><br><span class="line">data-num-items=“28”    //显示最近访客的数量</span><br><span class="line">data-avatar-size=“42”    //显示最近访客头像尺寸大小</span><br><span class="line">id=“ds-recent-visitors”    //为了调节最近访客样式加的</span><br></pre></td></tr></table></figure>
+
+<p>我的hexo站点是通过直接生成了<code>guestbook</code>的<code>page</code>，然后直接在<code>/guestbook/</code>目录下的<code>index.md</code>添加了上面那段代码实现的。<br><img src="/2015/06/guestbook-index-md.jpg" alt="guestbook目录下的index.md代码"></p>
+<h3 id="修改hexo最近访客样式"><a href="#修改hexo最近访客样式" class="headerlink" title="修改hexo最近访客样式"></a>修改<a href="http://www.arao.me/tags/hexo%E6%9C%80%E8%BF%91%E8%AE%BF%E5%AE%A2/" target="_blank" rel="noopener">hexo最近访客</a>样式</h3><p>通过<code>多说后台管理&gt;设置&gt;基本设置&gt;自定义CSS</code>修改最近访客css样式</p>
+<ul>
+<li>最近访客竖着排，改成排成一列</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#ds-recent-visitors .ds-avatar &#123;float:left&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>最近访客头像样式css和评论样式统一</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#ds-reset .ds-avatar img,#ds-recent-visitors .ds-avatar img&#123;这里是你定义的多说头像样式css&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>最近访客头像样式css和评论样式css分开设置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#ds-reset .ds-avatar img&#123;这里是自定义多说评论头像样式&#125;</span><br><span class="line">#ds-recent-visitors .ds-avatar img&#123;这里是自定义的多说最近访客头像样式css&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>我的整个多说自定义css，其中访客样式和评论样式统一</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#ds-reset .ds-avatar img,</span><br><span class="line">#ds-recent-visitors .ds-avatar img &#123;</span><br><span class="line">width: 54px;</span><br><span class="line">height: 54px;     /*设置图像的长和宽，这里要根据自己的评论框情况更改*/</span><br><span class="line">border-radius: 27px;     /*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/</span><br><span class="line">-webkit-border-radius: 27px;     /*圆角效果：兼容webkit浏览器*/</span><br><span class="line">-moz-border-radius: 27px;</span><br><span class="line">box-shadow: inset 0 -1px 0 #3333sf;     /*设置图像阴影效果*/</span><br><span class="line">-webkit-box-shadow: inset 0 -1px 0 #3333sf;</span><br><span class="line">-webkit-transition: 0.4s;</span><br><span class="line">-webkit-transition: -webkit-transform 0.4s ease-out;</span><br><span class="line">transition: transform 0.4s ease-out;     /*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/</span><br><span class="line">-moz-transition: -moz-transform 0.4s ease-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset .ds-avatar img:hover,</span><br><span class="line">#ds-recent-visitors .ds-avatar img:hover &#123;</span><br><span class="line"></span><br><span class="line">/*设置鼠标悬浮在头像时的CSS样式*/    box-shadow: 0 0 10px #fff;</span><br><span class="line">rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line">-webkit-box-shadow: 0 0 10px #fff;</span><br><span class="line">rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line">transform: rotateZ(360deg);     /*图像旋转360度*/</span><br><span class="line">-webkit-transform: rotateZ(360deg);</span><br><span class="line">-moz-transform: rotateZ(360deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-textarea-wrapper textarea &#123;</span><br><span class="line">background: url(http://ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg) right no-repeat;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-recent-visitors .ds-avatar &#123;</span><br><span class="line">float: left</span><br><span class="line">&#125;</span><br><span class="line">/*隐藏多说底部版权*/</span><br><span class="line">#ds-thread #ds-reset .ds-powered-by &#123;</span><br><span class="line">display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何扒别人多说自定义样式"><a href="#如何扒别人多说自定义样式" class="headerlink" title="如何扒别人多说自定义样式"></a>如何扒别人<a href="http://www.arao.me/tags/%E5%A4%9A%E8%AF%B4/" target="_blank" rel="noopener">多说</a>自定义样式</h3><p>爱美之心人皆有之！有时候看到别人博客的多说样式很好看，总想扒下来搞到自己博客怎么办？貌似扒人家东西有点不道德哦！<br>按F12打开浏览器调试代码的功能，多说自定义样式css一般在<code>&lt;head&gt;&lt;/head&gt;</code>里，在</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://static.duoshuo.com/styles/embed.default.css?XXXXXXX.css&quot;&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;这里是多说自定义css&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>里面，这样你就轻松地扒出来想要的多说自定义CSS样式了。Enjoy It!
+<img src="/2015/06/duoshuo-css-f12.jpg" alt="F12调试工具下的多说自定义css"></p>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ARao Lin</p>
+              <div class="site-description motion-element" itemprop="description">我们的征途是星辰大海</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引入多说通用JS代码"><span class="nav-number">1.</span> <span class="nav-text">引入多说通用JS代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#往你想添加的页面增加下面的一小段代码即可。"><span class="nav-number">2.</span> <span class="nav-text">往你想添加的页面增加下面的一小段代码即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hexo最近访客样式"><span class="nav-number">3.</span> <span class="nav-text">修改hexo最近访客样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何扒别人多说自定义样式"><span class="nav-number">4.</span> <span class="nav-text">如何扒别人多说自定义样式</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ARao Lin</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/araome/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/araome/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/araome/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/araome/js/utils.js?v=7.1.2"></script>
+
+  <script src="/araome/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/araome/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/araome/js/scrollspy.js?v=7.1.2"></script>
+<script src="/araome/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/araome/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -44,21 +44,21 @@
 
 
 
-<link rel="stylesheet" href="/araome/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/araome/css/main.css?v=7.1.2">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/araome/images/apple-touch-icon-next.png?v=7.1.2">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/araome/images/favicon-32x32-next.png?v=7.1.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/araome/images/favicon-16x16-next.png?v=7.1.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/araome/images/logo.svg?v=7.1.2" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
 
 
 
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/araome/',
+    root: '/',
     scheme: 'Muse',
     version: '7.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -97,10 +97,10 @@
 
 
   <meta name="description" content="我为什么最后没有放弃多说相信不少正在使用多说社会化评论系统的博主和我遇到同样头痛的问题，就是多说系统偶尔会抽风，服务器器不稳定，加载速度慢，甚至有时候多说js与css文件加载失败，导致多说评论框无法显示，多说分享无法正常使用等等。或许你会建议我使用其他第三方社会化评论系统，其实第一次听说要换社会评论系统我是拒绝的,因为,你不能让我换,我就马上去换，后来尝试了两三个其他第三方社会评论系统后，我还是">
-<meta name="keywords" content="hexo,七牛云存储,多说">
-<meta property="og:type" content="website">
+<meta name="keywords" content="hexo,多说,七牛云存储">
+<meta property="og:type" content="article">
 <meta property="og:title" content="多说评论不稳定，加载速度慢优化方法">
-<meta property="og:url" content="http://araolin.coding.me/make-duoshuo-faster-qiniu-cdn.html">
+<meta property="og:url" content="http://araolin.coding.me/2015/make-duoshuo-faster-qiniu-cdn/index.html">
 <meta property="og:site_name" content="ARAO&#39;S BLOG">
 <meta property="og:description" content="我为什么最后没有放弃多说相信不少正在使用多说社会化评论系统的博主和我遇到同样头痛的问题，就是多说系统偶尔会抽风，服务器器不稳定，加载速度慢，甚至有时候多说js与css文件加载失败，导致多说评论框无法显示，多说分享无法正常使用等等。或许你会建议我使用其他第三方社会化评论系统，其实第一次听说要换社会评论系统我是拒绝的,因为,你不能让我换,我就马上去换，后来尝试了两三个其他第三方社会评论系统后，我还是">
 <meta property="og:locale" content="zh-Hans">
@@ -121,7 +121,7 @@
 
   
   
-  <link rel="canonical" href="http://araolin.coding.me/make-duoshuo-faster-qiniu-cdn">
+  <link rel="canonical" href="http://araolin.coding.me/2015/make-duoshuo-faster-qiniu-cdn/">
 
 
 
@@ -188,7 +188,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/araome/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">ARAO'S BLOG</span>
         <span class="logo-line-after"><i></i></span>
@@ -231,7 +231,7 @@
 
     
 
-    <a href="/araome/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -248,7 +248,7 @@
 
     
 
-    <a href="/araome/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -259,19 +259,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -299,32 +286,115 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://araolin.coding.me/2015/make-duoshuo-faster-qiniu-cdn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ARao Lin">
+      <meta itemprop="description" content="我们的征途是星辰大海">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ARAO'S BLOG">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">多说评论不稳定，加载速度慢优化方法
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p><img src="/2015/07/duoshuo-cdn.jpg" alt="多说评论不稳定怎么办"></p>
+          <h1 class="post-title" itemprop="name headline">多说评论不稳定，加载速度慢优化方法
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-07-09 02:19:49" itemprop="dateCreated datePublished" datetime="2015-07-09T02:19:49+08:00">2015-07-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-15 02:51:31" itemprop="dateModified" datetime="2019-06-15T02:51:31+08:00">2019-06-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2015/07/duoshuo-cdn.jpg" alt="多说评论不稳定怎么办"></p>
 <h2 id="我为什么最后没有放弃多说"><a href="#我为什么最后没有放弃多说" class="headerlink" title="我为什么最后没有放弃多说"></a>我为什么最后没有放弃多说</h2><p>相信不少正在使用<a href="http://www.arao.me/tags/%E5%A4%9A%E8%AF%B4/" target="_blank" rel="noopener">多说</a>社会化评论系统的博主和我遇到同样头痛的问题，就是多说系统偶尔会抽风，服务器器不稳定，加载速度慢，甚至有时候多说js与css文件加载失败，导致多说评论框无法显示，多说分享无法正常使用等等。或许你会建议我使用其他第三方社会化评论系统，其实第一次听说要换社会评论系统我是拒绝的,因为,你不能让我换,我就马上去换，后来尝试了两三个其他第三方社会评论系统后，我还是用回了多说评论，原因有三：</p>
 <a id="more"></a>
 
@@ -367,19 +437,76 @@
 <h3 id="多说静态文件经过七牛CDN加速效果"><a href="#多说静态文件经过七牛CDN加速效果" class="headerlink" title="多说静态文件经过七牛CDN加速效果"></a>多说静态文件经过七牛CDN加速效果</h3><p>没加速之前，经百度站长平台网站速度诊断工具测试，多说<code>dsembed.js</code>花了接近两秒时间来加载；<br><img src="/2015/07/duoshuo-cdn-before.jpg" alt="多说CDN加速前"><br>利用七牛镜像存储实现多说JS和CSS静态文件CDN后，再重新测试，足足省了1秒多。<br><img src="/2015/07/duoshuo-cdn-after.jpg" alt="多说CDN加速后"></p>
 <h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>你还可以通过把你的网站镜像到七牛，而七牛具有cdn加速功能，从而加速你的网站，详情参考<a href="http://kb.qiniu.com/how-to-use-image-storage-and-qrsync" target="_blank" rel="noopener">镜像存储与qrsync数据同步的使用</a>，因为我的hexo不仅放在github pages，还同步放在gitcafe pages上，访问速度还OK，就不折腾这个了。</p>
 
-        
-      </div>
-      
-      
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/多说/" rel="tag"># 多说</a>
+          
+            <a href="/tags/七牛云存储/" rel="tag"># 七牛云存储</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/hexo-optimize-pic-lazyload/" rel="next" title="动动手指，Hexo页面图片实现延迟加载(此方法无效)">
+                <i class="fa fa-chevron-left"></i> 动动手指，Hexo页面图片实现延迟加载(此方法无效)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/github-pages-araome-301-www/" rel="prev" title="Github Pages301重定向简单的让我有点接受唔到咯">
+                Github Pages301重定向简单的让我有点接受唔到咯 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -429,9 +556,65 @@
           
             <nav class="site-state motion-element">
               
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
@@ -573,42 +756,42 @@
 
 
   
-  <script src="/araome/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
-  <script src="/araome/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script src="/araome/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/araome/js/utils.js?v=7.1.2"></script>
-
-  <script src="/araome/js/motion.js?v=7.1.2"></script>
-
-
-
-  
-  
-
-
-  <script src="/araome/js/schemes/muse.js?v=7.1.2"></script>
-
-
-
-  
-  <script src="/araome/js/scrollspy.js?v=7.1.2"></script>
-<script src="/araome/js/post-details.js?v=7.1.2"></script>
-
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script src="/araome/js/next-boot.js?v=7.1.2"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   

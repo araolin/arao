@@ -44,21 +44,21 @@
 
 
 
-<link rel="stylesheet" href="/araome/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/araome/css/main.css?v=7.1.2">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/araome/images/apple-touch-icon-next.png?v=7.1.2">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/araome/images/favicon-32x32-next.png?v=7.1.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/araome/images/favicon-16x16-next.png?v=7.1.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/araome/images/logo.svg?v=7.1.2" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
 
 
 
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/araome/',
+    root: '/',
     scheme: 'Muse',
     version: '7.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -98,9 +98,9 @@
 
   <meta name="description" content="不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如hexo虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。">
 <meta name="keywords" content="hexo,tw_cn.js,简体繁体">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="三步让你的网站支持简体繁体切换">
-<meta property="og:url" content="http://araolin.coding.me/hexo-support-jian-fan-language.html">
+<meta property="og:url" content="http://araolin.coding.me/2015/hexo-support-jian-fan-language/index.html">
 <meta property="og:site_name" content="ARAO&#39;S BLOG">
 <meta property="og:description" content="不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如hexo虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。">
 <meta property="og:locale" content="zh-Hans">
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://araolin.coding.me/hexo-support-jian-fan-language">
+  <link rel="canonical" href="http://araolin.coding.me/2015/hexo-support-jian-fan-language/">
 
 
 
@@ -184,7 +184,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/araome/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">ARAO'S BLOG</span>
         <span class="logo-line-after"><i></i></span>
@@ -227,7 +227,7 @@
 
     
 
-    <a href="/araome/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -244,7 +244,7 @@
 
     
 
-    <a href="/araome/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -255,19 +255,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -295,32 +282,115 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://araolin.coding.me/2015/hexo-support-jian-fan-language/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ARao Lin">
+      <meta itemprop="description" content="我们的征途是星辰大海">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ARAO'S BLOG">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">三步让你的网站支持简体繁体切换
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p><img src="/2015/07/jian2fan.jpg" alt="tw_cn.js让你的网站支持简体中文繁体中文选择"></p>
+          <h1 class="post-title" itemprop="name headline">三步让你的网站支持简体繁体切换
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-07-20 02:23:32" itemprop="dateCreated datePublished" datetime="2015-07-20T02:23:32+08:00">2015-07-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-15 02:51:31" itemprop="dateModified" datetime="2019-06-15T02:51:31+08:00">2019-06-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2015/07/jian2fan.jpg" alt="tw_cn.js让你的网站支持简体中文繁体中文选择"></p>
 <blockquote>
 <p>不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如<a href="http://www.arao.me/tags/hexo/" target="_blank" rel="noopener">hexo</a>虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。</p>
 </blockquote>
@@ -340,19 +410,72 @@
 </ol>
 <p>这就基本完成了简体繁体切换功能,不管你是hexo，jelly，Octopress等静态博客，还是wordpress，<a href="http://www.arao.me/tags/hexo/" target="_blank" rel="noopener">typecho</a>，emlog，Z-Blog等动态的，都可以用上。具体的演示效果可以点击我博客底部简体中文切换字体,至于简体繁体切换按钮嘛，文字和样式可以按个人喜好自行更改。</p>
 
-        
-      </div>
-      
-      
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/tw-cn-js/" rel="tag"># tw_cn.js</a>
+          
+            <a href="/tags/简体繁体/" rel="tag"># 简体繁体</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/github-pages-araome-301-www/" rel="next" title="Github Pages301重定向简单的让我有点接受唔到咯">
+                <i class="fa fa-chevron-left"></i> Github Pages301重定向简单的让我有点接受唔到咯
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -393,9 +516,65 @@
           
             <nav class="site-state motion-element">
               
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
@@ -520,42 +699,42 @@
 
 
   
-  <script src="/araome/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
-  <script src="/araome/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script src="/araome/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/araome/js/utils.js?v=7.1.2"></script>
-
-  <script src="/araome/js/motion.js?v=7.1.2"></script>
-
-
-
-  
-  
-
-
-  <script src="/araome/js/schemes/muse.js?v=7.1.2"></script>
-
-
-
-  
-  <script src="/araome/js/scrollspy.js?v=7.1.2"></script>
-<script src="/araome/js/post-details.js?v=7.1.2"></script>
-
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script src="/araome/js/next-boot.js?v=7.1.2"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   

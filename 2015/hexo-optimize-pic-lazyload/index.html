@@ -44,21 +44,21 @@
 
 
 
-<link rel="stylesheet" href="/araome/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/araome/css/main.css?v=7.1.2">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/araome/images/apple-touch-icon-next.png?v=7.1.2">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/araome/images/favicon-32x32-next.png?v=7.1.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/araome/images/favicon-16x16-next.png?v=7.1.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/araome/images/logo.svg?v=7.1.2" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
 
 
 
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/araome/',
+    root: '/',
     scheme: 'Muse',
     version: '7.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -97,10 +97,10 @@
 
 
   <meta name="description" content="关于lazyload图片延迟加载简单介绍LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图">
-<meta name="keywords" content="hexo,lazyload,typecho">
-<meta property="og:type" content="website">
+<meta name="keywords" content="hexo,typecho,lazyload">
+<meta property="og:type" content="article">
 <meta property="og:title" content="动动手指，Hexo页面图片实现延迟加载(此方法无效)">
-<meta property="og:url" content="http://araolin.coding.me/hexo-optimize-pic-lazyload.html">
+<meta property="og:url" content="http://araolin.coding.me/2015/hexo-optimize-pic-lazyload/index.html">
 <meta property="og:site_name" content="ARAO&#39;S BLOG">
 <meta property="og:description" content="关于lazyload图片延迟加载简单介绍LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图">
 <meta property="og:locale" content="zh-Hans">
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://araolin.coding.me/hexo-optimize-pic-lazyload">
+  <link rel="canonical" href="http://araolin.coding.me/2015/hexo-optimize-pic-lazyload/">
 
 
 
@@ -184,7 +184,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/araome/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">ARAO'S BLOG</span>
         <span class="logo-line-after"><i></i></span>
@@ -227,7 +227,7 @@
 
     
 
-    <a href="/araome/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -244,7 +244,7 @@
 
     
 
-    <a href="/araome/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -255,19 +255,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -295,32 +282,115 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://araolin.coding.me/2015/hexo-optimize-pic-lazyload/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ARao Lin">
+      <meta itemprop="description" content="我们的征途是星辰大海">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ARAO'S BLOG">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">动动手指，Hexo页面图片实现延迟加载(此方法无效)
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p><img src="/2015/06/lazyload-loading-pic.jpg" alt="hexo实现图片延迟加载"></p>
+          <h1 class="post-title" itemprop="name headline">动动手指，Hexo页面图片实现延迟加载(此方法无效)
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-06-28 02:14:48" itemprop="dateCreated datePublished" datetime="2015-06-28T02:14:48+08:00">2015-06-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-15 02:51:31" itemprop="dateModified" datetime="2019-06-15T02:51:31+08:00">2019-06-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2015/06/lazyload-loading-pic.jpg" alt="hexo实现图片延迟加载"></p>
 <h3 id="关于lazyload图片延迟加载简单介绍"><a href="#关于lazyload图片延迟加载简单介绍" class="headerlink" title="关于lazyload图片延迟加载简单介绍"></a>关于lazyload图片延迟加载简单介绍</h3><p>LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图片之后即进入就绪状态，在某些情况下还可以帮助降低服务器负担。<br>因此，比较流行的wordpress主题，<a href="http://www.arao.me/tags/typecho/" target="_blank" rel="noopener">typecho</a>主题，emlog主题等都使用了lazyload图片延迟加载来实现快速加载页面。</p>
 <a id="more"></a>
 <p>当然啦，你的网站纯文字的，就没必要多搞个jquery插件了。</p>
@@ -336,19 +406,76 @@
 <li>在上述代码中，<code>img</code>是延迟加载所有图片，这里你可以根据不同模板作相应改动。比如我现在使用的next主题，可以改成<code>#posts img</code>，这样更改后，只延迟加载<code>#posts</code>容器内的图片，否则主题侧边的头像和协议图片也跟着延迟加载，等最后才加载出来。所以和我一样使用next主题的最后把<code>jQuery(&amp;quot;img&amp;quot;)</code>改成<code>jQuery(&amp;quot;#posts img&amp;quot;)</code>。使用其他模板的根据不同模板实际显示效果自行更改。</li>
 </ol>
 
-        
-      </div>
-      
-      
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/typecho/" rel="tag"># typecho</a>
+          
+            <a href="/tags/lazyload/" rel="tag"># lazyload</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/hexo-next-theme-optimize-duoshuo/" rel="next" title="动动手指，给你的Hexo站点添加最近访客（多说篇）">
+                <i class="fa fa-chevron-left"></i> 动动手指，给你的Hexo站点添加最近访客（多说篇）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/make-duoshuo-faster-qiniu-cdn/" rel="prev" title="多说评论不稳定，加载速度慢优化方法">
+                多说评论不稳定，加载速度慢优化方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -398,9 +525,65 @@
           
             <nav class="site-state motion-element">
               
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
@@ -542,42 +725,42 @@
 
 
   
-  <script src="/araome/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
-  <script src="/araome/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script src="/araome/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/araome/js/utils.js?v=7.1.2"></script>
-
-  <script src="/araome/js/motion.js?v=7.1.2"></script>
-
-
-
-  
-  
-
-
-  <script src="/araome/js/schemes/muse.js?v=7.1.2"></script>
-
-
-
-  
-  <script src="/araome/js/scrollspy.js?v=7.1.2"></script>
-<script src="/araome/js/post-details.js?v=7.1.2"></script>
-
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script src="/araome/js/next-boot.js?v=7.1.2"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   

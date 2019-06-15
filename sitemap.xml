@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wwww.arao.me/tags/index.html</loc>
+    
+    <lastmod>2019-06-15T02:31:27.914Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wwww.arao.me/2015/github-pages-araome-301-www/</loc>
+    
+    <lastmod>2019-06-15T02:29:29.778Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wwww.arao.me/2015/hexo-next-theme-optimize-base/</loc>
+    
+    <lastmod>2019-06-15T02:29:18.254Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wwww.arao.me/categories/index.html</loc>
+    
+    <lastmod>2019-06-15T02:29:04.114Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wwww.arao.me/guestbook/index.html</loc>
     
     <lastmod>2019-06-14T21:16:32.058Z</lastmod>
@@ -51,23 +79,9 @@
   </url>
   
   <url>
-    <loc>http://wwww.arao.me/2015/hexo-next-theme-optimize-base/</loc>
-    
-    <lastmod>2019-06-14T18:51:31.630Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wwww.arao.me/2015/hexo-next-theme-optimize-duoshuo/</loc>
     
     <lastmod>2019-06-14T18:51:31.630Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wwww.arao.me/2015/github-pages-araome-301-www/</loc>
-    
-    <lastmod>2019-06-14T18:51:31.578Z</lastmod>
     
   </url>
   

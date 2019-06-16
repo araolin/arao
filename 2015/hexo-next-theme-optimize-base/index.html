@@ -97,7 +97,7 @@
 
 
   <meta name="description" content="NexT主题安装使用从 GitHub 下载12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next">
-<meta name="keywords" content="NexT主题,github,hexo,swiftype">
+<meta name="keywords" content="github,NexT主题,hexo,swiftype">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动动手指，NexT主题与Hexo更搭哦（基础篇）">
 <meta property="og:url" content="https://wwww.arao.me/2015/hexo-next-theme-optimize-base/index.html">
@@ -109,7 +109,7 @@
 <meta property="og:image" content="https://wwww.arao.me/2015/06/qzone-404.jpg">
 <meta property="og:image" content="https://wwww.arao.me/2015/06/your-swiftype-key.jpg">
 <meta property="og:image" content="https://wwww.arao.me/2015/06/st-search-input.jpg">
-<meta property="og:updated_time" content="2019-06-16T03:24:39.484Z">
+<meta property="og:updated_time" content="2019-06-16T03:41:01.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动动手指，NexT主题与Hexo更搭哦（基础篇）">
 <meta name="twitter:description" content="NexT主题安装使用从 GitHub 下载12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next">
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-16 11:24:39" itemprop="dateModified" datetime="2019-06-16T11:24:39+08:00">2019-06-16</time>
+                <time title="修改时间：2019-06-16 11:41:01" itemprop="dateModified" datetime="2019-06-16T11:41:01+08:00">2019-06-16</time>
               
             
           </span>
@@ -525,7 +525,7 @@
 <p>改成下面代码即可</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elif page.type === &apos;about&apos;|| page.type === &apos;guestbook&apos; %&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="为你的hexo网站NexT主题增加留言页"><a href="#为你的hexo网站NexT主题增加留言页" class="headerlink" title="为你的hexo网站NexT主题增加留言页"></a>为你的<code>hexo</code>网站<code>NexT</code>主题增加留言页</h3><p>经过上个步骤你现在可以任意指定某些页面支持多说系统，现在我们实现指定<code>guestbook page</code>支持多说系统，从而实现留言功能。指定guestbook页面支持多说系统很简单，只需要把上面提到的<strong>仅在指定的单个页面page支持多说评论</strong>这例子中的<code>page.type === &quot;about&quot;</code>改成<code>page.type === &amp;&quot;guestbook&quot;;</code>即可。修改完毕后，接下来要做的是：</p>
+<h3 id="为你的hexo网站NexT主题增加留言页"><a href="#为你的hexo网站NexT主题增加留言页" class="headerlink" title="为你的hexo网站NexT主题增加留言页"></a>为你的<code>hexo</code>网站<code>NexT</code>主题增加留言页</h3><p>经过上个步骤你现在可以任意指定某些页面支持多说系统，现在我们实现指定<code>guestbook page</code>支持多说系统，从而实现留言功能。指定guestbook页面支持多说系统很简单，只需要把上面提到的<strong>仅在指定的单个页面page支持多说评论</strong>这例子中的<code>page.type === &quot;about&quot;</code>改成<code>page.type === &quot;guestbook&quot;;</code>即可。修改完毕后，接下来要做的是：</p>
 <ol>
 <li><p>找到你NexT主题<code>_config.yml</code>（主意是NexT主题的<code>_config.yml</code>，不是<a href="/tags/hexo/">hexo</a>站点目录下的<code>_config.yml</code>），文件路径<code>your-hexo-site/themes/next/_config.yml</code>，添加 <code>guestbook</code> 到 <code>menu</code> 中，如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  #categories: /categories</span><br><span class="line">  about: /about</span><br><span class="line">  archives: /archives</span><br><span class="line">  # tags: /tags</span><br><span class="line">  #commonweal: /404.html</span><br><span class="line">  guestbook: /guestbook</span><br></pre></td></tr></table></figure>
@@ -582,9 +582,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/NexT主题/" rel="tag"># NexT主题</a>
-          
             <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/NexT主题/" rel="tag"># NexT主题</a>
           
             <a href="/tags/hexo/" rel="tag"># hexo</a>
           

@@ -109,7 +109,7 @@
 <meta property="og:image" content="https://wwww.arao.me/2015/07/duoshuo-jingxiang-qiniu-cdn.jpg">
 <meta property="og:image" content="https://wwww.arao.me/2015/07/duoshuo-cdn-before.jpg">
 <meta property="og:image" content="https://wwww.arao.me/2015/07/duoshuo-cdn-after.jpg">
-<meta property="og:updated_time" content="2019-06-16T03:25:07.516Z">
+<meta property="og:updated_time" content="2019-06-16T03:36:09.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多说评论不稳定，加载速度慢优化方法">
 <meta name="twitter:description" content="我为什么最后没有放弃多说相信不少正在使用多说社会化评论系统的博主和我遇到同样头痛的问题，就是多说系统偶尔会抽风，服务器器不稳定，加载速度慢，甚至有时候多说js与css文件加载失败，导致多说评论框无法显示，多说分享无法正常使用等等。或许你会建议我使用其他第三方社会化评论系统，其实第一次听说要换社会评论系统我是拒绝的,因为,你不能让我换,我就马上去换，后来尝试了两三个其他第三方社会评论系统后，我还是">
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-16 11:25:07" itemprop="dateModified" datetime="2019-06-16T11:25:07+08:00">2019-06-16</time>
+                <time title="修改时间：2019-06-16 11:36:09" itemprop="dateModified" datetime="2019-06-16T11:36:09+08:00">2019-06-16</time>
               
             
           </span>
@@ -499,7 +499,7 @@
 </ol>
 <ul>
 <li>别逗了，撤掉多说评论的话，我<code>hexo</code>站点以前的评论不久没了么。</li>
-<li>好吧，其实最让我不舍的是多说最近访客功能，这是其他社会化评论系统无法提供的。如何让你的博客支持多说最近访客可以参考我的这篇文章<a href="/2015/hexo-next-theme-optimize-duoshuo/">《动动手指，给你的<code>Hexo</code>站点添加最近访客（多说篇）》</a>。</li>
+<li>好吧，其实最让我不舍的是多说最近访客功能，这是其他社会化评论系统无法提供的。如何让你的博客支持多说最近访客可以参考我的这篇文章<a href="/2015/hexo-next-theme-optimize-duoshuo/">《动动手指，给你的Hexo站点添加最近访客（多说篇）》</a>。</li>
 </ul>
 <h2 id="多说评论不稳定，加载速度慢怎么办？"><a href="#多说评论不稳定，加载速度慢怎么办？" class="headerlink" title="多说评论不稳定，加载速度慢怎么办？"></a>多说评论不稳定，加载速度慢怎么办？</h2><h3 id="把多说评论依赖的embed-js放置底部"><a href="#把多说评论依赖的embed-js放置底部" class="headerlink" title="把多说评论依赖的embed.js放置底部"></a>把多说评论依赖的<code>embed.js</code>放置底部</h3><p>Yahoo性能中心总结的高性能网站设计的规则提及，把<code>Javascript</code>脚本尽量放到页面底部加载，这里不多说。<br><code>wordpress</code>多说插件提供了在网页底部插入多说核心脚本<code>embed.js</code>这选项供用户选择，比较人性化。其他博客程序的话可以把<code>embed.js</code>放置到主题的footer底部加载。这里以<code>hexo</code>静态博客程序，<code>NexT.Mist</code>主题举个栗子，这里需要修改的文件是<code>duoshuo.swig</code>，路径是<code>your-hexo-site\themes\next\layout\_scripts</code>目录下，将下面一段代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(document.getElementsByTagName(&apos;head&apos;)[0]</span><br></pre></td></tr></table></figure>

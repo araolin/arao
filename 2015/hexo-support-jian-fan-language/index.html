@@ -105,7 +105,7 @@
 <meta property="og:description" content="不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如hexo虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wwww.arao.me/2015/07/jian2fan.jpg">
-<meta property="og:updated_time" content="2019-06-14T18:51:31.642Z">
+<meta property="og:updated_time" content="2019-06-16T03:25:02.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三步让你的网站支持简体繁体切换">
 <meta name="twitter:description" content="不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如hexo虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。">
@@ -429,11 +429,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-15 02:51:31" itemprop="dateModified" datetime="2019-06-15T02:51:31+08:00">2019-06-15</time>
+                <time title="修改时间：2019-06-16 11:25:02" itemprop="dateModified" datetime="2019-06-16T11:25:02+08:00">2019-06-16</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站经验/" itemprop="url" rel="index"><span itemprop="name">建站经验</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -465,23 +483,23 @@
       
         <p><img src="/2015/07/jian2fan.jpg" alt="tw_cn.js让你的网站支持简体中文繁体中文选择"></p>
 <blockquote>
-<p>不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如<a href="http://www.arao.me/tags/hexo/" target="_blank" rel="noopener">hexo</a>虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。</p>
+<p>不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如<a href="/tags/hexo/">hexo</a>虽然作者是来自台湾的，但是<code>hexo</code>的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，<code>hexo</code>得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。</p>
 </blockquote>
 <a id="more"></a>
 
 <p>具体实现：</p>
 <ol>
-<li><p>首先，<a href="http://www.arao.me/js/tw_cn.js" target="_blank" rel="noopener">点击这里</a>右键另存下载简繁字体切换所需的<code>tw_cn.js</code>文件，上传到自己的网站空间。</p>
+<li><p>首先，<a href="/tw_cn.zip">点击这里</a>右键另存下载简繁字体切换所需的<code>tw_cn.js</code>文件，上传到自己的网站空间。</p>
 </li>
 <li><p>其次，修改模板，在你想要显示简繁转换按钮的地方加上下面一段代码，正常情况添加到<code>header.php</code>或者<code>siderbar.php</code>就可以了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a id=&quot;translateLink&quot; href=&quot;javascript:translatePage();&quot;&gt;繁體&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>最后，在footer.php添加下面代码，记得更改<code>cookieDomain</code>这一项。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.arao.me/js/tw_cn.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体</span><br><span class="line">var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0</span><br><span class="line">var cookieDomain = &quot;http://www.arao.me/&quot;; //Cookie地址, 一定要设定, 通常为你的网址</span><br><span class="line">var msgToTraditionalChinese = &quot;繁體&quot;; //此处可以更改为你想要显示的文字</span><br><span class="line">var msgToSimplifiedChinese = &quot;简体&quot;; //同上，但两处均不建议更改</span><br><span class="line">var translateButtonId = &quot;translateLink&quot;; //默认互换id</span><br><span class="line">translateInitilization();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/tw_cn.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体</span><br><span class="line">var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0</span><br><span class="line">var cookieDomain = &quot;https://www.arao.me/&quot;; //Cookie地址, 一定要设定, 通常为你的网址</span><br><span class="line">var msgToTraditionalChinese = &quot;繁體&quot;; //此处可以更改为你想要显示的文字</span><br><span class="line">var msgToSimplifiedChinese = &quot;简体&quot;; //同上，但两处均不建议更改</span><br><span class="line">var translateButtonId = &quot;translateLink&quot;; //默认互换id</span><br><span class="line">translateInitilization();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<p>这就基本完成了简体繁体切换功能,不管你是hexo，jelly，Octopress等静态博客，还是wordpress，<a href="http://www.arao.me/tags/hexo/" target="_blank" rel="noopener">typecho</a>，emlog，Z-Blog等动态的，都可以用上。具体的演示效果可以点击我博客底部简体中文切换字体,至于简体繁体切换按钮嘛，文字和样式可以按个人喜好自行更改。</p>
+<p>这就基本完成了简体繁体切换功能,不管你是<code>hexo</code>，<code>jelly</code>，<code>Octopress</code>等静态博客，还是wordpress，<a href="/tags/hexo/">typecho</a>，<code>emlog</code>，<code>Z-Blog</code>等动态的，都可以用上。具体的演示效果可以点击我博客底部简体中文切换字体,至于简体繁体切换按钮嘛，文字和样式可以按个人喜好自行更改。</p>
 
       
     </div>
@@ -604,6 +622,23 @@
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
 
               

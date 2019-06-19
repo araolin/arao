@@ -1774,7 +1774,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cc4dff;
+  background: #b32b66;
 }
 .feed-link,
 .chat {
@@ -2805,4 +2805,15 @@ a:hover {
 }
 .post-toc .nav .active-current > a:hover {
   color: #d60036;
+}
+.content {
+  border-radius: 10px;
+  margin-top: 60px;
+  background: rgba(164,0,0,0.9) none repeat scroll !important;
+  padding: 60px;
+}
+code {
+  color: #a40000;
+  background: #bf7 8;
+  margin: 2px;
 }

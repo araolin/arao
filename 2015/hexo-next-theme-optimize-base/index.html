@@ -104,16 +104,16 @@
 <meta property="og:site_name" content="ARAO&#39;S BLOG">
 <meta property="og:description" content="NexT主题安装使用从 GitHub 下载12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wwww.arao.me/2015/06/hexo-next-arao-edit.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/06/about-page-comment.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/06/qzone-404.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/06/your-swiftype-key.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/06/st-search-input.jpg">
-<meta property="og:updated_time" content="2019-06-16T03:41:01.659Z">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/hexo-next-arao-edit.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/about-page-comment.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/qzone-404.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/your-swiftype-key.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/st-search-input.jpg">
+<meta property="og:updated_time" content="2019-06-19T01:54:14.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动动手指，NexT主题与Hexo更搭哦（基础篇）">
 <meta name="twitter:description" content="NexT主题安装使用从 GitHub 下载12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next">
-<meta name="twitter:image" content="https://wwww.arao.me/2015/06/hexo-next-arao-edit.jpg">
+<meta name="twitter:image" content="https://img.v2gr.com/2015/06/hexo-next-arao-edit.jpg">
 
 
 
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-16 11:41:01" itemprop="dateModified" datetime="2019-06-16T11:41:01+08:00">2019-06-16</time>
+                <time title="修改时间：2019-06-19 09:54:14" itemprop="dateModified" datetime="2019-06-19T09:54:14+08:00">2019-06-19</time>
               
             
           </span>
@@ -485,7 +485,7 @@
       
 
       
-        <p><img src="/2015/06/hexo-next-arao-edit.jpg" alt="macbook下的hexo主题NexT.Mist预览"></p>
+        <p><img src="https://img.v2gr.com/2015/06/hexo-next-arao-edit.jpg" alt="macbook下的hexo主题NexT.Mist预览"></p>
 <h2 id="NexT主题安装使用"><a href="#NexT主题安装使用" class="headerlink" title="NexT主题安装使用"></a>NexT主题安装使用</h2><h3 id="从-GitHub-下载"><a href="#从-GitHub-下载" class="headerlink" title="从 GitHub 下载"></a>从 <a href="/tags/github/">GitHub</a> 下载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
@@ -505,7 +505,7 @@
 <p>复制到下面代码的底部</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block sidebar %&#125;</span><br><span class="line">  &#123;&#123; sidebar_template.render(false) &#125;&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line">//代码插在这里</span><br></pre></td></tr></table></figure>
 
-<p>保存。<br>这时候，你新建的<code>page</code>页面除了标签云页面、分类页面均支持评论了，如about页面,效果如下：<br><img src="/2015/06/about-page-comment.jpg" alt="about支持评论"></p>
+<p>保存。<br>这时候，你新建的<code>page</code>页面除了标签云页面、分类页面均支持评论了，如about页面,效果如下：<br><img src="https://img.v2gr.com/2015/06/about-page-comment.jpg" alt="about支持评论"></p>
 <h3 id="仅在指定的单个页面page支持多说评论"><a href="#仅在指定的单个页面page支持多说评论" class="headerlink" title="仅在指定的单个页面page支持多说评论"></a>仅在指定的单个页面<code>page</code>支持多说评论</h3><p>经过上面的修改，默认你新建的<code>page</code>页面都支持 多说 / DISQUS 评论系统，但是我想指定仅是某个页面支持评论那怎么办呢？<br>例如，我仅仅是想<code>about</code>页面支持多说评论系统(我使用的是多说评论系统， DISQUS 评论系统就不考虑了，你们自行修改吧)<br>还是更改NexT主题<code>page.swig</code>文件。<br>page.swig的路径： <code>your-hexo-site/themes/next/layout/page.swig</code><br>找到<code>page.swing</code>文件（没经过任何修改的，也就是经过上面提到的让你的<code>page</code>页面支持评论系统处理的），将下面代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   &#123;% elif page.type === &apos;about&apos; %&#125;</span><br><span class="line">   &#123;&#123; page.content &#125;&#125;</span><br><span class="line">&lt;div class=&quot;comments&quot; id=&quot;comments&quot;&gt;</span><br><span class="line">     &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&#123;&#123; page.path &#125;&#125;&quot;</span><br><span class="line">          data-title=&quot;&#123;&#123; page.title &#125;&#125;&quot; data-url=&quot;&#123;&#123; page.permalink &#125;&#125;&quot;&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line"> &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
@@ -538,12 +538,12 @@
 
 </li>
 </ol>
-<h2 id="NexT主题添加腾讯空间404公益页面"><a href="#NexT主题添加腾讯空间404公益页面" class="headerlink" title="NexT主题添加腾讯空间404公益页面"></a>NexT主题添加腾讯空间<code>404</code>公益页面</h2><p>原来主题也有介绍了如何在增加腾讯公益404页面，但是整个页面跳了出去，我个人比较喜欢下面404页面嵌在内页这种风格<br><img src="/2015/06/qzone-404.jpg" alt="腾讯空间404"><br>使用方法一样，新建404.html页面，将下面代码拷进去保存，放到主题的source目录下即可：</p>
+<h2 id="NexT主题添加腾讯空间404公益页面"><a href="#NexT主题添加腾讯空间404公益页面" class="headerlink" title="NexT主题添加腾讯空间404公益页面"></a>NexT主题添加腾讯空间<code>404</code>公益页面</h2><p>原来主题也有介绍了如何在增加腾讯公益404页面，但是整个页面跳了出去，我个人比较喜欢下面404页面嵌在内页这种风格<br><img src="https://img.v2gr.com/2015/06/qzone-404.jpg" alt="腾讯空间404"><br>使用方法一样，新建404.html页面，将下面代码拷进去保存，放到主题的source目录下即可：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;404 - arao&apos;blog&lt;/title&gt;</span><br><span class="line">	&lt;meta name=&quot;description&quot; content=&quot;404错误，页面不存在！&quot;&gt;</span><br><span class="line">	&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8;&quot;/&gt;</span><br><span class="line">	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</span><br><span class="line">	&lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;</span><br><span class="line">	&lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot; src=&quot;//qzonestyle.gtimg.cn/qzone_v6/lostchild/search_children.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="Swiftype站内搜索"><a href="#Swiftype站内搜索" class="headerlink" title="Swiftype站内搜索"></a><a href="/tags/swiftype/">Swiftype</a>站内搜索</h2><p>呃，<code>NexT</code>主题<code>github</code>上给的教程有点旧了，那就粗略说下最新的使用<code>swiftype</code>实现站内搜索方法吧，基于<code>swiftype v2.0.0</code>版本。<br>1.在站点的配置文件中增加<br><code>swiftype_key: your-swiftype-key</code></p>
-<p>2.在<a href="https://swiftype.com/users/sign_up" target="_blank" rel="noopener">swiftype官网</a>后台控制面板中选择 install，填完外观(appearance)一项后进入安装代码(install code)即可看到自己的 <code>swiftype_key</code> ,填外观(appearance)一直按<code>next</code>默认样式即可。<br><img src="/2015/06/your-swiftype-key.jpg" alt="your-swiftype-key"></p>
-<p>3.在进入搜索框(search field)一项时，主意将搜索框的ID改成NexT主题搜索框的ID<code>#st-search-input</code><br><img src="/2015/06/st-search-input.jpg" alt="swiftype搜索框ID"></p>
+<p>2.在<a href="https://swiftype.com/users/sign_up" target="_blank" rel="noopener">swiftype官网</a>后台控制面板中选择 install，填完外观(appearance)一项后进入安装代码(install code)即可看到自己的 <code>swiftype_key</code> ,填外观(appearance)一直按<code>next</code>默认样式即可。<br><img src="https://img.v2gr.com/2015/06/your-swiftype-key.jpg" alt="your-swiftype-key"></p>
+<p>3.在进入搜索框(search field)一项时，主意将搜索框的ID改成NexT主题搜索框的ID<code>#st-search-input</code><br><img src="https://img.v2gr.com/2015/06/st-search-input.jpg" alt="swiftype搜索框ID"></p>
 <p>4.最后进入(activate)这一项，点击右下角的ACTIVATE SWIFTYPE按钮即可完成<code>swiftype</code>的所有配置了。</p>
 <p>5.可能遇到的问题：<code>swiftype</code>的爬虫一直抓取不了你的页面，一直搜索失败。后台提示如下：<br><strong>Our crawler hasn’t downloaded any pages yet</strong><br>If this message doesn’t disappear in a few minutes, please check that your website’s Robots.txt file does not block the “Swiftbot” User-agent, and that your website does not have Robots meta tags that prevent web crawlers from visiting your pages.<br>我一开始填写网址的时候是填了<code>https://www.arao.me</code>,后来改成<code>https://www.arao.me/</code>多了<code>/</code>后就成功了。</p>
 <h2 id="hexo-NexT主题首页title的优化"><a href="#hexo-NexT主题首页title的优化" class="headerlink" title="hexo NexT主题首页title的优化"></a>hexo NexT主题首页<code>title</code>的优化</h2><p>更改<code>index.swig</code>文件，文件路径是<code>your-hexo-site\themes\next\layout</code>，将下面代码</p>

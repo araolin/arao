@@ -104,16 +104,16 @@
 <meta property="og:site_name" content="ARAO&#39;S BLOG">
 <meta property="og:description" content="我为什么最后没有放弃多说相信不少正在使用多说社会化评论系统的博主和我遇到同样头痛的问题，就是多说系统偶尔会抽风，服务器器不稳定，加载速度慢，甚至有时候多说js与css文件加载失败，导致多说评论框无法显示，多说分享无法正常使用等等。或许你会建议我使用其他第三方社会化评论系统，其实第一次听说要换社会评论系统我是拒绝的,因为,你不能让我换,我就马上去换，后来尝试了两三个其他第三方社会评论系统后，我还是">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wwww.arao.me/2015/07/duoshuo-cdn.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/07/qiniu-static-duoshuo.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/07/duoshuo-jingxiang-qiniu-cdn.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/07/duoshuo-cdn-before.jpg">
-<meta property="og:image" content="https://wwww.arao.me/2015/07/duoshuo-cdn-after.jpg">
-<meta property="og:updated_time" content="2019-06-16T03:36:09.444Z">
+<meta property="og:image" content="https://img.v2gr.com/2015/07/duoshuo-cdn.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/07/qiniu-static-duoshuo.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/07/duoshuo-jingxiang-qiniu-cdn.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/07/duoshuo-cdn-before.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/07/duoshuo-cdn-after.jpg">
+<meta property="og:updated_time" content="2019-06-19T01:56:49.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多说评论不稳定，加载速度慢优化方法">
 <meta name="twitter:description" content="我为什么最后没有放弃多说相信不少正在使用多说社会化评论系统的博主和我遇到同样头痛的问题，就是多说系统偶尔会抽风，服务器器不稳定，加载速度慢，甚至有时候多说js与css文件加载失败，导致多说评论框无法显示，多说分享无法正常使用等等。或许你会建议我使用其他第三方社会化评论系统，其实第一次听说要换社会评论系统我是拒绝的,因为,你不能让我换,我就马上去换，后来尝试了两三个其他第三方社会评论系统后，我还是">
-<meta name="twitter:image" content="https://wwww.arao.me/2015/07/duoshuo-cdn.jpg">
+<meta name="twitter:image" content="https://img.v2gr.com/2015/07/duoshuo-cdn.jpg">
 
 
 
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-16 11:36:09" itemprop="dateModified" datetime="2019-06-16T11:36:09+08:00">2019-06-16</time>
+                <time title="修改时间：2019-06-19 09:56:49" itemprop="dateModified" datetime="2019-06-19T09:56:49+08:00">2019-06-19</time>
               
             
           </span>
@@ -485,7 +485,7 @@
       
 
       
-        <p><img src="/2015/07/duoshuo-cdn.jpg" alt="多说评论不稳定怎么办"></p>
+        <p><img src="https://img.v2gr.com/2015/07/duoshuo-cdn.jpg" alt="多说评论不稳定怎么办"></p>
 <h2 id="我为什么最后没有放弃多说"><a href="#我为什么最后没有放弃多说" class="headerlink" title="我为什么最后没有放弃多说"></a>我为什么最后没有放弃多说</h2><p>相信不少正在使用<a href="/tags/%E5%A4%9A%E8%AF%B4/">多说</a>社会化评论系统的博主和我遇到同样头痛的问题，就是多说系统偶尔会抽风，服务器器不稳定，加载速度慢，甚至有时候多说<code>js</code>与<code>css</code>文件加载失败，导致多说评论框无法显示，多说分享无法正常使用等等。或许你会建议我使用其他第三方社会化评论系统，其实第一次听说要换社会评论系统我是拒绝的,因为,你不能让我换,我就马上去换，后来尝试了两三个其他第三方社会评论系统后，我还是用回了多说评论，原因有三：</p>
 <a id="more"></a>
 
@@ -510,7 +510,7 @@
 <p>即可。</p>
 <h3 id="并不是所有页面都需要加载多说embed-js，一些没用上多说服务的页面就没必要加载了"><a href="#并不是所有页面都需要加载多说embed-js，一些没用上多说服务的页面就没必要加载了" class="headerlink" title="并不是所有页面都需要加载多说embed.js，一些没用上多说服务的页面就没必要加载了"></a>并不是所有页面都需要加载多说<code>embed.js</code>，一些没用上多说服务的页面就没必要加载了</h3><p>如果在一些没必要加载多说<code>embed.js</code>的页面你却加载了，这样也是会影响页面打开速度的。hexo的<a href="/tags/NexT%E4%B8%BB%E9%A2%98/">next主题</a>这方面就处理的很好。next主题仅仅在首页（首页文章评论数需要引用多说embed.js）和内页（内页多说评论和多说分享依赖多说脚本）加载多说核心脚本<code>embed.js</code>，其它页面概不加载，next主题不愧是<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">《有那些好看的hexo主题? 》</a>深受<code>hexo</code>博主欢迎的一个<code>hexo</code>主题，细节方面处理的很好，感谢主题作者<code>iissnan</code>。
 顺便提一下，我的<code>hexo</code>网站留言是我在<code>next</code>主题基础上加的，因为用到多说评论和多说最近访客，所以也是需要加载多说核心<code>JS</code>的，<code>hexo</code>留言页具体实现可以参考我这篇文章<a href="/2015/hexo-next-theme-optimize-base/">《动动手指，NexT主题与Hexo更搭哦（基础篇）》</a></p>
-<h3 id="巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速"><a href="#巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速" class="headerlink" title="巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速"></a>巧用七牛镜像存储实现多说<code>JS</code>和<code>CSS</code>静态文件<code>CDN</code>加速</h3><p><strong>这(shang)是(mian)本(zhu)文(yao)的(wei)核(le)心(S)部(E)分(O)！</strong><br>多说在我们的网站前台主要依赖加载<code>embed.js</code>、<code>embed.xxx.css</code>这两个文件提供服务，其中<code>embed.js</code>是多说评论的核心脚本，多说样式<code>embed.xxx.css</code>也是靠这脚本调用加载的，而<code>embed.xxx.css</code>又包含多说评论样式和多说分享样式。这两个文件存放在多说<code>static.duoshuo.com</code>二级域名下，我们可以把这两个静态文件放在七牛云存储，获得更多的加速节点来加速这两个文件。利用七牛镜像存储实现多说静态文件CDN后，我们请求的是七牛加速节点，减少对多说服务器的请求，多少减少了多说服务器负担，越多站长加入，效果更明显，多说服务器也相对稳定些。<br>具体实现步骤：<br>1、 在七牛新建一个空间<strong>还没七牛账号可以<a href="https://portal.qiniu.com/signup?code=3lpah2waav2vm" target="_blank" rel="noopener">点击这里</a>注册,有<code>edu</code>邮箱的可以参与<a href="https://www.arao.me/2015/qiniu-qingcong-1k-diyongquan/" target="_blank" rel="noopener">《青葱创业计划：凭edu邮箱免费领取七牛1000元抵用券》</a></strong>，点击<strong>空间设置</strong> &gt; <strong>基本设置</strong> &gt; <strong>一键加速网站</strong>，镜像源地址填写<code>static.duoshuo.com</code>，提交<br><img src="/2015/07/qiniu-static-duoshuo.jpg" alt="七牛镜像存储加速多说"><br>加速成功后，可以通过七牛提供的空间访问域名访问到多说镜像网站，也可以自定义域名。我使用的是自定义域名<code>araome.yiluup.com</code>，访问结果<br><img src="/2015/07/duoshuo-jingxiang-qiniu-cdn.jpg" alt="多说镜像网站"><br>2、 下载<a href="//static.duoshuo.com/embed.js">多说核心脚本embed.js</a>，需要更改一处地方代码，</p>
+<h3 id="巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速"><a href="#巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速" class="headerlink" title="巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速"></a>巧用七牛镜像存储实现多说<code>JS</code>和<code>CSS</code>静态文件<code>CDN</code>加速</h3><p><strong>这(shang)是(mian)本(zhu)文(yao)的(wei)核(le)心(S)部(E)分(O)！</strong><br>多说在我们的网站前台主要依赖加载<code>embed.js</code>、<code>embed.xxx.css</code>这两个文件提供服务，其中<code>embed.js</code>是多说评论的核心脚本，多说样式<code>embed.xxx.css</code>也是靠这脚本调用加载的，而<code>embed.xxx.css</code>又包含多说评论样式和多说分享样式。这两个文件存放在多说<code>static.duoshuo.com</code>二级域名下，我们可以把这两个静态文件放在七牛云存储，获得更多的加速节点来加速这两个文件。利用七牛镜像存储实现多说静态文件CDN后，我们请求的是七牛加速节点，减少对多说服务器的请求，多少减少了多说服务器负担，越多站长加入，效果更明显，多说服务器也相对稳定些。<br>具体实现步骤：<br>1、 在七牛新建一个空间<strong>还没七牛账号可以<a href="https://portal.qiniu.com/signup?code=3lpah2waav2vm" target="_blank" rel="noopener">点击这里</a>注册,有<code>edu</code>邮箱的可以参与<a href="https://www.arao.me/2015/qiniu-qingcong-1k-diyongquan/" target="_blank" rel="noopener">《青葱创业计划：凭edu邮箱免费领取七牛1000元抵用券》</a></strong>，点击<strong>空间设置</strong> &gt; <strong>基本设置</strong> &gt; <strong>一键加速网站</strong>，镜像源地址填写<code>static.duoshuo.com</code>，提交<br><img src="https://img.v2gr.com/2015/07/qiniu-static-duoshuo.jpg" alt="七牛镜像存储加速多说"><br>加速成功后，可以通过七牛提供的空间访问域名访问到多说镜像网站，也可以自定义域名。我使用的是自定义域名<code>araome.yiluup.com</code>，访问结果<br><img src="https://img.v2gr.com/2015/07/duoshuo-jingxiang-qiniu-cdn.jpg" alt="多说镜像网站"><br>2、 下载<a href="//static.duoshuo.com/embed.js">多说核心脚本embed.js</a>，需要更改一处地方代码，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function n(e)&#123;j.theme=e,&quot;none&quot;!=e&amp;&amp;o.injectStylesheet(j.STATIC_URL+&quot;/styles/embed&quot;+(e?&quot;.&quot;+e+&quot;.css?&quot;+R[e]:&quot;.&quot;+short_name)+&quot;.css&quot;)&#125;</span><br></pre></td></tr></table></figure>
 
 <p>上面代码应该是调用多说样式<code>embed.xxx.css</code>，我们需要修改成我们七牛镜像的多说样式，只需把<code>j.STATIC_URL</code>更改成七牛空间访问域名，例如我修改成<code>&amp;quot;&amp;quot;</code>。更改后另存为<code>dsembed.js</code>（重命名主要防止与七牛镜像中的embed.js冲突）。最后上传到七牛空间里。现在你可以通过地址<code>/dsembed.js</code>访问经过七牛CDN加速后的多说核心脚本。<br>3、 把多说默认引入<code>static.duoshuo.com</code>域名下的<code>embed.js</code>更改成七牛空间更改后的<code>dsembed.js</code>即可。<br>这里以多说通用代码为例，</p>
@@ -526,7 +526,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ds.src = (document.location.protocol == &apos;/dsembed.js&apos;;</span><br></pre></td></tr></table></figure>
 
 <p>如果你是hexo Next主题的话，需要更改的文件是<code>duoshuo.swig</code>，具体路径在<code>your-hexo-site\themes\next\layout\_scripts\comments</code>目录里。<br>最后值的注意的是，如果你的<code>https</code>站点的话，需要在七牛云储存配置<code>https</code>，最后通过七牛提供的<code>https://dn-yourdomain.qbox.me</code>的域名访问多说镜像静态文件，具体实现就不赘述了。</p>
-<h3 id="多说静态文件经过七牛CDN加速效果"><a href="#多说静态文件经过七牛CDN加速效果" class="headerlink" title="多说静态文件经过七牛CDN加速效果"></a>多说静态文件经过七牛CDN加速效果</h3><p>没加速之前，经百度站长平台网站速度诊断工具测试，多说<code>dsembed.js</code>花了接近两秒时间来加载；<br><img src="/2015/07/duoshuo-cdn-before.jpg" alt="多说CDN加速前"><br>利用七牛镜像存储实现多说JS和CSS静态文件CDN后，再重新测试，足足省了1秒多。<br><img src="/2015/07/duoshuo-cdn-after.jpg" alt="多说CDN加速后"></p>
+<h3 id="多说静态文件经过七牛CDN加速效果"><a href="#多说静态文件经过七牛CDN加速效果" class="headerlink" title="多说静态文件经过七牛CDN加速效果"></a>多说静态文件经过七牛CDN加速效果</h3><p>没加速之前，经百度站长平台网站速度诊断工具测试，多说<code>dsembed.js</code>花了接近两秒时间来加载；<br><img src="https://img.v2gr.com/2015/07/duoshuo-cdn-before.jpg" alt="多说CDN加速前"><br>利用七牛镜像存储实现多说JS和CSS静态文件CDN后，再重新测试，足足省了1秒多。<br><img src="https://img.v2gr.com/2015/07/duoshuo-cdn-after.jpg" alt="多说CDN加速后"></p>
 <h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>你还可以通过把你的网站镜像到七牛，而七牛具有cdn加速功能，从而加速你的网站，详情参考<a href="https://kb.qiniu.com/how-to-use-image-storage-and-qrsync" target="_blank" rel="noopener">《镜像存储与qrsync数据同步的使用》</a>，因为我的<code>hexo</code>不仅放在<code>github pages</code>，还同步放在<code>gitcafe pages</code>上，访问速度还OK，就不折腾这个了。</p>
 
       

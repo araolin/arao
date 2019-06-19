@@ -96,24 +96,20 @@
 
 
 
-  <meta name="description" content="开始的开始，我只知道github pages可以托管静态html页面，并不知道github pages是支持301重定向的，而搜索引擎认为带www和不带www域名是两个不同的网站，如果带www和不带www的域名指向同一个站点，内容相同，是会导致权重分散的，这里需要用到301重定向实现带www与不带www域名永久重定向到其中一个，达到权重集中带www和不带www域名其中一个上。">
-<meta name="keywords" content="301重定向,github">
+  <meta name="description" content="不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如hexo虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。">
+<meta name="keywords" content="hexo,tw_cn.js,简体繁体">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github Pages301重定向简单的让我有点接受唔到咯">
-<meta property="og:url" content="https://wwww.arao.me/2015/github-pages-araome-301-www/index.html">
+<meta property="og:title" content="三步让你的网站支持简体繁体切换">
+<meta property="og:url" content="https://wwww.arao.me/website/hexo-support-jian-fan-language/index.html">
 <meta property="og:site_name" content="ARAO&#39;S BLOG">
-<meta property="og:description" content="开始的开始，我只知道github pages可以托管静态html页面，并不知道github pages是支持301重定向的，而搜索引擎认为带www和不带www域名是两个不同的网站，如果带www和不带www的域名指向同一个站点，内容相同，是会导致权重分散的，这里需要用到301重定向实现带www与不带www域名永久重定向到其中一个，达到权重集中带www和不带www域名其中一个上。">
+<meta property="og:description" content="不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如hexo虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.v2gr.com/2015/07/github-pages-301.jpg">
-<meta property="og:image" content="https://img.v2gr.com/2015/07/araome-yindao-html.jpg">
-<meta property="og:image" content="https://img.v2gr.com/2015/07/araome-uip-sinaapp.jpg">
-<meta property="og:image" content="https://img.v2gr.com/2015/07/araome-301-http.jpg">
-<meta property="og:image" content="https://img.v2gr.com/2015/07/cname-to-github-pages.jpg">
-<meta property="og:updated_time" content="2019-06-19T17:11:12.295Z">
+<meta property="og:image" content="https://img.v2gr.com/2015/07/jian2fan.jpg">
+<meta property="og:updated_time" content="2019-06-19T01:55:52.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github Pages301重定向简单的让我有点接受唔到咯">
-<meta name="twitter:description" content="开始的开始，我只知道github pages可以托管静态html页面，并不知道github pages是支持301重定向的，而搜索引擎认为带www和不带www域名是两个不同的网站，如果带www和不带www的域名指向同一个站点，内容相同，是会导致权重分散的，这里需要用到301重定向实现带www与不带www域名永久重定向到其中一个，达到权重集中带www和不带www域名其中一个上。">
-<meta name="twitter:image" content="https://img.v2gr.com/2015/07/github-pages-301.jpg">
+<meta name="twitter:title" content="三步让你的网站支持简体繁体切换">
+<meta name="twitter:description" content="不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如hexo虽然作者是来自台湾的，但是hexo的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，hexo得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。">
+<meta name="twitter:image" content="https://img.v2gr.com/2015/07/jian2fan.jpg">
 
 
 
@@ -123,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="https://wwww.arao.me/2015/github-pages-araome-301-www/">
+  <link rel="canonical" href="https://wwww.arao.me/website/hexo-support-jian-fan-language/">
 
 
 
@@ -133,7 +129,7 @@
   };
 </script>
 
-  <title>Github Pages301重定向简单的让我有点接受唔到咯 _ ARAO'S BLOG</title>
+  <title>三步让你的网站支持简体繁体切换 _ ARAO'S BLOG</title>
   
 
 
@@ -373,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwww.arao.me/2015/github-pages-araome-301-www/">
+    <link itemprop="mainEntityOfPage" href="https://wwww.arao.me/website/hexo-support-jian-fan-language/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ARao Lin">
@@ -390,7 +386,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Github Pages301重定向简单的让我有点接受唔到咯
+          <h2 class="post-title" itemprop="name headline">三步让你的网站支持简体繁体切换
 
               
             
@@ -416,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2015-07-18 02:23:32" itemprop="dateCreated datePublished" datetime="2015-07-18T02:23:32+08:00">2015-07-18</time>
+              <time title="创建时间：2015-07-20 02:23:32" itemprop="dateCreated datePublished" datetime="2015-07-20T02:23:32+08:00">2015-07-20</time>
             
 
             
@@ -433,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-20 01:11:12" itemprop="dateModified" datetime="2019-06-20T01:11:12+08:00">2019-06-20</time>
+                <time title="修改时间：2019-06-19 09:55:52" itemprop="dateModified" datetime="2019-06-19T09:55:52+08:00">2019-06-19</time>
               
             
           </span>
@@ -485,20 +481,25 @@
       
 
       
-        <p><img src="https://img.v2gr.com/2015/07/github-pages-301.jpg" alt="github pages 301重定向"><br>开始的开始，我只知道<a href="/tags/github/">github</a> pages可以托管静态<code>html</code>页面，并不知道<code>github pages</code>是支持301重定向的，而搜索引擎认为带<code>www</code>和不带<code>www</code>域名是两个不同的网站，如果带<code>www</code>和不带<code>www</code>的域名指向同一个站点，内容相同，是会导致权重分散的，这里需要用到301重定向实现带<code>www</code>与不带<code>www</code>域名永久重定向到其中一个，达到权重集中带<code>www</code>和不带<code>www</code>域名其中一个上。</p>
-<a id="more"></a>
-<p>不知道<code>github pages</code>支持301重定向的我只好<code>www.arao.me</code>域名指向托管在<code>github pages</code>和<code>gitcafe pages</code>上的<a href="/tags/hexo/">hexo</a>网站，而不带<code>www</code>的<code>arao.me</code>指向了我存放在新浪云上的独立的一页静态网页。所以以前你通过<code>arao.me</code>域名访问我的网站时，访问结果是一张引导页面（我是主打带<code>www</code>域名的，带或者不带<code>www</code>，看个人爱好吧）。</p>
-<p><img src="https://img.v2gr.com/2015/07/araome-yindao-html.jpg" alt="arao.me原来引导页面"><br>就这样，<code>arao.me</code>做引导页，<code>www.arao.me</code>是主站，权重集中在<code>www.arao.me</code>，一切尽在掌握中，直到。。</p>
-<p><img src="https://img.v2gr.com/2015/07/araome-uip-sinaapp.jpg" alt="arao.me新浪云uip统计"><br>我发现<code>arao.me</code>这域名有时候uip莫名其妙高，一张静态html页面花的新浪云云豆居然超出我的预算，而<code>www.arao.me</code>域名很稳定一天下来10多个IP，要知道我的是新站，10多个IP才是正常的好吗，一定是哪个熊孩子在黑我的<code>arao.me</code>小站。于是，我打算将<code>arao.me</code>站点也搬到<code>github pages</code>，无限流量，让你黑~黑泥煤呀！！！<br>当我把<code>arao.me</code>整个页面搬到<code>github pages</code>后，将<code>arao.me</code>域名指向<code>github pages</code>时，奇迹发生了，一输入<code>arao.me</code>，网站就自动跳到<code>www.arao.me</code>上去了，用站长工具检测下，居然返回301，也就是<code>arao.me</code>301重定向到<code>www.arao.me</code>网站上去了，这难道就是无心插柳柳成荫么！</p>
-<p><img src="https://img.v2gr.com/2015/07/araome-301-http.jpg" alt="arao.me301http状态码"></p>
+        <p><img src="https://img.v2gr.com/2015/07/jian2fan.jpg" alt="tw_cn.js让你的网站支持简体中文繁体中文选择"></p>
 <blockquote>
-<p><code>Github Pages</code>301的具体实现</p>
+<p>不少网站为了更好地照顾不同用户使用简体/繁体的阅读习惯，会提供简体繁体两种版本字体切换，提高用户体验。例如<a href="/tags/hexo/">hexo</a>虽然作者是来自台湾的，但是<code>hexo</code>的官网不仅提供了适合台湾同胞阅读的繁体中文版，还提供了适合我们内地同胞阅读的简体中文版，照顾了我们这些习惯使用简体读写的大陆用户，<code>hexo</code>得到了不少内地忠实粉丝追捧。同样，我们也可以提供繁体版来照顾那些使用繁体字的台湾、香港同胞阅读习惯。</p>
 </blockquote>
+<a id="more"></a>
+
+<p>具体实现：</p>
 <ol>
-<li>在仓库根目录下添加一个<code>CNAME</code>文件,没有后缀名,里面内容为你主打的域名，例如我主打带<code>www</code>的域名，就写<code>www.arao.me</code>;</li>
-<li>域名解析那里，将<code>@</code>和<code>www</code>CNAME记录的记录值同时设置为<code>username.github.io</code>即可完成<code>github pages</code>301重定向，就是那么简单。</li>
+<li><p>首先，<a href="/tw_cn.zip">点击这里</a>右键另存下载简繁字体切换所需的<code>tw_cn.js</code>文件，上传到自己的网站空间。</p>
+</li>
+<li><p>其次，修改模板，在你想要显示简繁转换按钮的地方加上下面一段代码，正常情况添加到<code>header.php</code>或者<code>siderbar.php</code>就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a id=&quot;translateLink&quot; href=&quot;javascript:translatePage();&quot;&gt;繁體&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后，在footer.php添加下面代码，记得更改<code>cookieDomain</code>这一项。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/tw_cn.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体</span><br><span class="line">var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0</span><br><span class="line">var cookieDomain = &quot;https://www.arao.me/&quot;; //Cookie地址, 一定要设定, 通常为你的网址</span><br><span class="line">var msgToTraditionalChinese = &quot;繁體&quot;; //此处可以更改为你想要显示的文字</span><br><span class="line">var msgToSimplifiedChinese = &quot;简体&quot;; //同上，但两处均不建议更改</span><br><span class="line">var translateButtonId = &quot;translateLink&quot;; //默认互换id</span><br><span class="line">translateInitilization();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
 </ol>
-<p><img src="https://img.v2gr.com/2015/07/cname-to-github-pages.jpg" alt="CNAME记录指向github pages"></p>
+<p>这就基本完成了简体繁体切换功能,不管你是<code>hexo</code>，<code>jelly</code>，<code>Octopress</code>等静态博客，还是wordpress，<a href="/tags/hexo/">typecho</a>，<code>emlog</code>，<code>Z-Blog</code>等动态的，都可以用上。具体的演示效果可以点击我博客底部简体中文切换字体,至于简体繁体切换按钮嘛，文字和样式可以按个人喜好自行更改。</p>
 
       
     </div>
@@ -525,9 +526,11 @@
         
         <div class="post-tags">
           
-            <a href="/tags/301重定向/" rel="tag"># 301重定向</a>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
-            <a href="/tags/github/" rel="tag"># github</a>
+            <a href="/tags/tw-cn-js/" rel="tag"># tw_cn.js</a>
+          
+            <a href="/tags/简体繁体/" rel="tag"># 简体繁体</a>
           
         </div>
       
@@ -540,8 +543,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/make-duoshuo-faster-qiniu-cdn/" rel="next" title="多说评论不稳定，加载速度慢优化方法">
-                <i class="fa fa-chevron-left"></i> 多说评论不稳定，加载速度慢优化方法
+              <a href="/website/github-pages-araome-301-www/" rel="next" title="Github Pages301重定向简单的让我有点接受唔到咯">
+                <i class="fa fa-chevron-left"></i> Github Pages301重定向简单的让我有点接受唔到咯
               </a>
             
           </div>
@@ -549,10 +552,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/hexo-support-jian-fan-language/" rel="prev" title="三步让你的网站支持简体繁体切换">
-                三步让你的网站支持简体繁体切换 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -876,7 +875,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2015/github-pages-araome-301-www/'
+    refer: 'website/hexo-support-jian-fan-language/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];

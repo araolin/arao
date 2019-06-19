@@ -1774,7 +1774,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b32b66;
+  background: #fa39ff;
 }
 .feed-link,
 .chat {
@@ -2809,11 +2809,79 @@ a:hover {
 .content {
   border-radius: 10px;
   margin-top: 60px;
-  background: rgba(164,0,0,0.9) none repeat scroll !important;
+  background: rgba(255,255,255,0.9) none repeat scroll !important;
   padding: 60px;
 }
 code {
   color: #a40000;
   background: #bf7 8;
   margin: 2px;
+}
+.post-copyright {
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #ff1700;
+  background-color: #f9f9f9;
+  list-style: none;
+}
+::selection {
+  background: #a40000;
+  color: #f7f7f7 0;
+}
+::-moz-selection {
+  background: #a40000;
+  color: #f7f7f7;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-button:start:increment,
+::-webkit-scrollbar-button:end:decrement {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
+  background-color: rgba(164,0,0,0.5);
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(164,0,0,0.15);
+}
+::-webkit-scrollbar-button:start {
+  width: 10px;
+  height: 10px;
+  background: url("../images/scrollbar_arrow.png") no-repeat 0 0;
+}
+::-webkit-scrollbar-button:start:hover {
+  background: url("../images/scrollbar_arrow.png") no-repeat -15px 0;
+}
+::-webkit-scrollbar-button:start:active {
+  background: url("../images/scrollbar_arrow.png") no-repeat -30px 0;
+}
+::-webkit-scrollbar-button:end {
+  width: 10px;
+  height: 10px;
+  background: url("../images/scrollbar_arrow.png") no-repeat 0 -18px;
+}
+::-webkit-scrollbar-button:end:hover {
+  background: url("../images/scrollbar_arrow.png") no-repeat -15px -18px;
+}
+::-webkit-scrollbar-button:end:active {
+  background: url("../images/scrollbar_arrow.png") no-repeat -30px -18px;
 }

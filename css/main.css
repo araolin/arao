@@ -1764,7 +1764,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3211cb;
+  background: #49c2fc;
 }
 .feed-link,
 .chat {
@@ -2704,95 +2704,4 @@ hr {
     width: auto;
     text-align: center;
   }
-}
-body {
-  background: url("/images/wp1_1280x1024_jpg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-.vwrap .vcard {
-  background: rgba(255,255,255,0.95) none repeat scroll !important;
-}
-.content {
-  border-radius: 5px;
-  margin-top: 60px;
-  padding: 60px;
-  background: rgba(255,255,255,0.8) none repeat scroll !important;
-}
-.main-inner {
-  width: 900px;
-}
-.header {
-  background: rgba(0,0,0,0.8) none repeat scroll !important;
-}
-.footer {
-  background: rgba(0,0,0,0.8) none repeat scroll !important;
-}
-#lv-container {
-  border-radius: 10px;
-  background: rgba(255,255,255,0.8) none repeat scroll !important;
-}
-#sidebar {
-  background: rgba(0,0,0,0.8) none repeat scroll !important;
-}
-.post-button {
-  margin-top: 20px;
-  text-align: center;
-}
-.post-button a:hover {
-  background: rgba(255,255,255,0);
-  color: #8f0008;
-  border-radius: 8px;
-  border-bottom-color: #8f0008;
-}
-.posts-expand .post-title {
-  font-size: 26px;
-  font-weight: 700;
-}
-hr {
-  color: #a40000;
-}
-div#days {
-  font-size: 15px;
-}
-div#days:hover {
-  color: #a40000;
-}
-.posts-expand .post-title-link::before {
-  background-color: #a40000;
-}
-.menu .menu-item a:hover {
-  color: #a40000;
-  background: #000;
-}
-.sidebar-nav .sidebar-nav-active {
-  color: #fff;
-  border-bottom-color: #a40000;
-}
-.sidebar-nav:hover .sidebar-nav-active:hover {
-  color: #a40000;
-}
-.sidebar-toggle-line {
-  background: #000;
-}
-.page-post-detail .sidebar-toggle-line {
-  background: #101010;
-}
-.back-to-top {
-  color: #000;
-}
-a:hover {
-  border-bottom-color: #d60036;
-}
-.post-toc .nav .active-current > a {
-  color: #eee;
-}
-.post-toc .nav .active > a {
-  color: #fff;
-  border-bottom-color: #d60036;
-}
-.post-toc .nav .active-current > a:hover {
-  color: #d60036;
 }

@@ -34,7 +34,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="hexo" scheme="https://wwww.arao.me/tags/hexo/"/>
@@ -50,7 +50,7 @@
     <link href="https://wwww.arao.me/2015/github-pages-araome-301-www/"/>
     <id>https://wwww.arao.me/2015/github-pages-araome-301-www/</id>
     <published>2015-07-17T18:23:32.000Z</published>
-    <updated>2019-06-19T01:53:29.385Z</updated>
+    <updated>2019-06-19T17:11:12.295Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://img.v2gr.com/2015/07/github-pages-301.jpg" alt="github pages 301重定向"><br>开始的开始，我只知道<a href="/tags/github/">github</a> pages可以托管静态<code>html</code>页面，并不知道<code>github pages</code>是支持301重定向的，而搜索引擎认为带<code>www</code>和不带<code>www</code>域名是两个不同的网站，如果带<code>www</code>和不带<code>www</code>的域名指向同一个站点，内容相同，是会导致权重分散的，这里需要用到301重定向实现带<code>www</code>与不带<code>www</code>域名永久重定向到其中一个，达到权重集中带<code>www</code>和不带<code>www</code>域名其中一个上。</p><a id="more"></a><p>不知道<code>github pages</code>支持301重定向的我只好<code>www.arao.me</code>域名指向托管在<code>github pages</code>和<code>gitcafe pages</code>上的<a href="/tags/hexo/">hexo</a>网站，而不带<code>www</code>的<code>arao.me</code>指向了我存放在新浪云上的独立的一页静态网页。所以以前你通过<code>arao.me</code>域名访问我的网站时，访问结果是一张引导页面（我是主打带<code>www</code>域名的，带或者不带<code>www</code>，看个人爱好吧）。</p><p><img src="https://img.v2gr.com/2015/07/araome-yindao-html.jpg" alt="arao.me原来引导页面"><br>就这样，<code>arao.me</code>做引导页，<code>www.arao.me</code>是主站，权重集中在<code>www.arao.me</code>，一切尽在掌握中，直到。。</p><p><img src="https://img.v2gr.com/2015/07/araome-uip-sinaapp.jpg" alt="arao.me新浪云uip统计"><br>我发现<code>arao.me</code>这域名有时候uip莫名其妙高，一张静态html页面花的新浪云云豆居然超出我的预算，而<code>www.arao.me</code>域名很稳定一天下来10多个IP，要知道我的是新站，10多个IP才是正常的好吗，一定是哪个熊孩子在黑我的<code>arao.me</code>小站。于是，我打算将<code>arao.me</code>站点也搬到<code>github pages</code>，无限流量，让你黑~黑泥煤呀！！！<br>当我把<code>arao.me</code>整个页面搬到<code>github pages</code>后，将<code>arao.me</code>域名指向<code>github pages</code>时，奇迹发生了，一输入<code>arao.me</code>，网站就自动跳到<code>www.arao.me</code>上去了，用站长工具检测下，居然返回301，也就是<code>arao.me</code>301重定向到<code>www.arao.me</code>网站上去了，这难道就是无心插柳柳成荫么！</p><p><img src="https://img.v2gr.com/2015/07/araome-301-http.jpg" alt="arao.me301http状态码"></p><blockquote><p><code>Github Pages</code>301的具体实现</p></blockquote><ol><li>在仓库根目录下添加一个<code>CNAME</code>文件,没有后缀名,里面内容为你主打的域名，例如我主打带<code>www</code>的域名，就写<code>www.arao.me</code>;</li><li>域名解析那里，将<code>@</code>和<code>www</code>CNAME记录的记录值同时设置为<code>username.github.io</code>即可完成<code>github pages</code>301重定向，就是那么简单。</li></ol><p><img src="https://img.v2gr.com/2015/07/cname-to-github-pages.jpg" alt="CNAME记录指向github pages"></p>]]></content>
     
@@ -60,7 +60,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="301重定向" scheme="https://wwww.arao.me/tags/301%E9%87%8D%E5%AE%9A%E5%90%91/"/>
@@ -85,7 +85,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="hexo" scheme="https://wwww.arao.me/tags/hexo/"/>
@@ -112,7 +112,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="hexo" scheme="https://wwww.arao.me/tags/hexo/"/>
@@ -142,7 +142,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="hexo" scheme="https://wwww.arao.me/tags/hexo/"/>
@@ -176,7 +176,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="NexT主题" scheme="https://wwww.arao.me/tags/NexT%E4%B8%BB%E9%A2%98/"/>
@@ -205,7 +205,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="github" scheme="https://wwww.arao.me/tags/github/"/>
@@ -236,7 +236,7 @@
     
     </summary>
     
-      <category term="建站经验" scheme="https://wwww.arao.me/categories/%E5%BB%BA%E7%AB%99%E7%BB%8F%E9%AA%8C/"/>
+      <category term="建站经验" scheme="https://wwww.arao.me/categories/website/"/>
     
     
       <category term="GitCafe" scheme="https://wwww.arao.me/tags/GitCafe/"/>

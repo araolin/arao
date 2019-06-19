@@ -96,20 +96,22 @@
 
 
 
-  <meta name="description" content="关于lazyload图片延迟加载简单介绍LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图">
-<meta name="keywords" content="hexo,typecho,lazyload">
+  <meta name="description" content="先说下我的SEO经历吧！大概是在2012年吧，当时我的雄赳赳气昂昂租了个虚拟主机，买了个域名，搞了个高校活动门户网，开始我的SEO历程。  其实也没什么，截至2014年闭站，百度权重也就2，谷歌PR值也就3而已啦。 其实也没什么，推广留下的官方微博@高校门户网 粉丝也就4K多个吧！ 其实也没什么，PS CS6刚出那会被我逮住了机会，弄了篇photoshop CS6资源相关的贴，十多天阅读过万！">
+<meta name="keywords" content="NexT主题,hexo,seo,sitemap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动动手指，Hexo页面图片实现延迟加载(此方法无效)">
-<meta property="og:url" content="https://wwww.arao.me/website/hexo-optimize-pic-lazyload/index.html">
+<meta property="og:title" content="动动手指，不限于NexT主题的Hexo优化（SEO篇）">
+<meta property="og:url" content="https://wwww.arao.me/website/hexo-next-theme-optimize-seo.html">
 <meta property="og:site_name" content="ARAO&#39;S BLOG">
-<meta property="og:description" content="关于lazyload图片延迟加载简单介绍LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图">
+<meta property="og:description" content="先说下我的SEO经历吧！大概是在2012年吧，当时我的雄赳赳气昂昂租了个虚拟主机，买了个域名，搞了个高校活动门户网，开始我的SEO历程。  其实也没什么，截至2014年闭站，百度权重也就2，谷歌PR值也就3而已啦。 其实也没什么，推广留下的官方微博@高校门户网 粉丝也就4K多个吧！ 其实也没什么，PS CS6刚出那会被我逮住了机会，弄了篇photoshop CS6资源相关的贴，十多天阅读过万！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.v2gr.com/2015/06/lazyload-loading-pic.jpg">
-<meta property="og:updated_time" content="2019-06-19T01:55:35.881Z">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/google-pr3-gxhdmh.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/link-arao-pr-out.jpg">
+<meta property="og:image" content="https://img.v2gr.com/2015/06/link-arao-pr-none.jpg">
+<meta property="og:updated_time" content="2019-06-19T01:55:22.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动动手指，Hexo页面图片实现延迟加载(此方法无效)">
-<meta name="twitter:description" content="关于lazyload图片延迟加载简单介绍LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图">
-<meta name="twitter:image" content="https://img.v2gr.com/2015/06/lazyload-loading-pic.jpg">
+<meta name="twitter:title" content="动动手指，不限于NexT主题的Hexo优化（SEO篇）">
+<meta name="twitter:description" content="先说下我的SEO经历吧！大概是在2012年吧，当时我的雄赳赳气昂昂租了个虚拟主机，买了个域名，搞了个高校活动门户网，开始我的SEO历程。  其实也没什么，截至2014年闭站，百度权重也就2，谷歌PR值也就3而已啦。 其实也没什么，推广留下的官方微博@高校门户网 粉丝也就4K多个吧！ 其实也没什么，PS CS6刚出那会被我逮住了机会，弄了篇photoshop CS6资源相关的贴，十多天阅读过万！">
+<meta name="twitter:image" content="https://img.v2gr.com/2015/06/google-pr3-gxhdmh.jpg">
 
 
 
@@ -119,7 +121,7 @@
 
   
   
-  <link rel="canonical" href="https://wwww.arao.me/website/hexo-optimize-pic-lazyload/">
+  <link rel="canonical" href="https://wwww.arao.me/website/hexo-next-theme-optimize-seo">
 
 
 
@@ -129,7 +131,7 @@
   };
 </script>
 
-  <title>动动手指，Hexo页面图片实现延迟加载(此方法无效) _ ARAO'S BLOG</title>
+  <title>动动手指，不限于NexT主题的Hexo优化（SEO篇） _ ARAO'S BLOG</title>
   
 
 
@@ -369,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wwww.arao.me/website/hexo-optimize-pic-lazyload/">
+    <link itemprop="mainEntityOfPage" href="https://wwww.arao.me/website/hexo-next-theme-optimize-seo.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ARao Lin">
@@ -386,7 +388,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">动动手指，Hexo页面图片实现延迟加载(此方法无效)
+          <h2 class="post-title" itemprop="name headline">动动手指，不限于NexT主题的Hexo优化（SEO篇）
 
               
             
@@ -412,7 +414,7 @@
                 
               
 
-              <time title="创建时间：2015-06-28 02:14:48" itemprop="dateCreated datePublished" datetime="2015-06-28T02:14:48+08:00">2015-06-28</time>
+              <time title="创建时间：2015-06-27 01:39:06" itemprop="dateCreated datePublished" datetime="2015-06-27T01:39:06+08:00">2015-06-27</time>
             
 
             
@@ -429,7 +431,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-19 09:55:35" itemprop="dateModified" datetime="2019-06-19T09:55:35+08:00">2019-06-19</time>
+                <time title="修改时间：2019-06-19 09:55:22" itemprop="dateModified" datetime="2019-06-19T09:55:22+08:00">2019-06-19</time>
               
             
           </span>
@@ -481,21 +483,63 @@
       
 
       
-        <p><img src="https://img.v2gr.com/2015/06/lazyload-loading-pic.jpg" alt="hexo实现图片延迟加载"></p>
-<h3 id="关于lazyload图片延迟加载简单介绍"><a href="#关于lazyload图片延迟加载简单介绍" class="headerlink" title="关于lazyload图片延迟加载简单介绍"></a>关于lazyload图片延迟加载简单介绍</h3><p><code>LazyLoad</code>大家再熟悉不过的一个<code>jquery</code>插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图片之后即进入就绪状态，在某些情况下还可以帮助降低服务器负担。<br>因此，比较流行的<code>wordpress</code>主题，<a href="/tags/typecho/">typecho</a>主题，emlog主题等都使用了<code>lazyload</code>图片延迟加载来实现快速加载页面。</p>
+        <p><img src="https://img.v2gr.com/2015/06/google-pr3-gxhdmh.jpg" alt="高校活动门户seo查询"></p>
+<h2 id="先说下我的SEO经历吧！"><a href="#先说下我的SEO经历吧！" class="headerlink" title="先说下我的SEO经历吧！"></a>先说下我的<a href="/tags/seo/">SEO</a>经历吧！</h2><p>大概是在2012年吧，当时我的雄赳赳气昂昂租了个虚拟主机，买了个域名，搞了个高校活动门户网，开始我的SEO历程。</p>
+<ul>
+<li>其实也没什么，截至2014年闭站，百度权重也就2，谷歌PR值也就3而已啦。</li>
+<li>其实也没什么，推广留下的官方微博@高校门户网 粉丝也就4K多个吧！</li>
+<li>其实也没什么，PS CS6刚出那会被我逮住了机会，弄了篇photoshop CS6资源相关的贴，十多天阅读过万！</li>
+</ul>
 <a id="more"></a>
-<p>当然啦，你的网站纯文字的，就没必要多搞个<code>jquery</code>插件了。</p>
-<h3 id="怎样使用lazyload？"><a href="#怎样使用lazyload？" class="headerlink" title="怎样使用lazyload？"></a>怎样使用<code>lazyload</code>？</h3><p>其实很简单，只需在你所使用头部<code>&lt;head&gt;&lt;/head&gt;</code>标签中插入下面一段代码即可,你也可以添加到<code>footer</code>中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">      jQuery(function() &#123;          </span><br><span class="line">          jQuery(&quot;img&quot;).lazyload(&#123;</span><br><span class="line">            placeholder:&quot;https://www.arao.me/loading.gif&quot;,</span><br><span class="line">              effect:&quot;fadeIn&quot;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<p>以我的<code>hexo</code>网站和现在使用的next主题举例子，我是习惯把js添加到底部的，找到<code>_layout.swig</code>,路径在<code>your-hexo-site\themes\next\layout</code>,把前面的代码添加到<code>&lt;/body&gt;</code>标签前面就OK了。<br>如果你是hexo其他主题的，找到<code>footer.ejs</code>文件，一般是在<code>themes/你的主题/layout/_partial/</code>路径下，把上述的代码添加进去就行了。<br>若是使用了<code>wordpress</code>，<code>typecho</code>，<code>emlog</code>等其他博客后台的，也差不多这样改，往你的主题模板<code>&lt;/head&gt;</code>或者<code>&lt;/body&gt;</code>前上述代码即可,我的<code>typecho</code>网站也是这样实现图片延迟加载的。<br>如果你希望没看到图片前先加载200px，可以通过设置阀值来控制，具体实现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jQuery(&quot;img&quot;).lazyload(&#123; threshold : 200 &#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其实也没什么，大三期间和几个小伙伴帮实习的公司seo某个关键字，现在依然坚挺的在百度搜索结果排行前列。</li>
+<li>其实上面这些并没有什么卵用，站早就关了，留个chinaz站长工具seo查询结果做个纪念吧。（前些日子给新站备案，高校活动门户的备案也注销了）</li>
+</ul>
+<p>没想到吧，我还有SEO方面的隐藏技能吧！<br>呃，还是低调点好，毕竟是有好长一段时间没接触SEO了，很多东西已经没有时效性了，只能靠着以前一些经验做做<code>hexo</code>的<code>seo</code>小优化吧。</p>
+<h2 id="给你的hexo站点添加sitemap网站地图"><a href="#给你的hexo站点添加sitemap网站地图" class="headerlink" title="给你的hexo站点添加sitemap网站地图"></a>给你的<code>hexo</code>站点添加<code>sitemap</code>网站地图</h2><ol>
+<li><p>安装hexo的<a href="/tags/sitemap/">sitemap</a>网站地图生成插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在你的<a href="/tags/hexo/">hexo</a>站点的<code>_config.yml</code>添加下面的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># hexo sitemap网站地图</span><br><span class="line">sitemap:</span><br><span class="line">path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置成功后，<code>hexo</code>编译时会在<code>hexo</code>站点根目录生成<code>sitemap.xml</code>和<code>baidusitemap.xml</code><br>其中<code>sitemap.xml</code>适合提交给谷歌搜素引擎，<code>baidusitemap.xml</code>适合提交百度搜索引擎。<br>其次，在<code>robots.txt</code>中添加下面的一段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sitemap: https://www.arao.me/sitemap.xml</span><br><span class="line">Sitemap: https://www.arao.me/baidusitemap.xml</span><br></pre></td></tr></table></figure>
 
-<p>上面代码比较通用，基本满足你的网站图片延迟加载需求。<br>值得一提的是：</p>
-<ol>
-<li><a href="/tags/lazyload/">lazyload</a>依赖jquery，如果你的站点没引用<code>juery</code>，请先引入<code>jquery</code>。</li>
-<li>在上述代码中，<code>img</code>是延迟加载所有图片，这里你可以根据不同模板作相应改动。比如我现在使用的next主题，可以改成<code>#posts img</code>，这样更改后，只延迟加载<code>#posts</code>容器内的图片，否则主题侧边的头像和协议图片也跟着延迟加载，等最后才加载出来。所以和我一样使用<code>next</code>主题的最后把<code>jQuery(&quot;img&quot;)</code>改成<code>jQuery(&quot;#posts img&quot;)</code>。使用其他模板的根据不同模板实际显示效果自行更改。</li>
+</li>
 </ol>
+<p>请自行改成自己的网站。</p>
+<h2 id="给你的hexo网站添加蜘蛛协议robots-txt"><a href="#给你的hexo网站添加蜘蛛协议robots-txt" class="headerlink" title="给你的hexo网站添加蜘蛛协议robots.txt"></a>给你的hexo网站添加蜘蛛协议robots.txt</h2><p>可以参考我的robots.txt，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># hexo robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line"></span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /js/</span><br><span class="line">Disallow: /css/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line"></span><br><span class="line">Sitemap: https://www.arao.me/sitemap.xml</span><br><span class="line">Sitemap: https://www.arao.me/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>把<code>robots.txt</code>放在你的<code>hexo</code>站点的<code>source</code>文件下即可。</p>
+<h2 id="给非友情链接的出站链接添加-nofollow标签"><a href="#给非友情链接的出站链接添加-nofollow标签" class="headerlink" title="给非友情链接的出站链接添加 nofollow标签"></a>给非友情链接的出站链接添加 <code>nofollow</code>标签</h2><p>经过chinaz站长工具友情链接检测，发现有不必要的PR值输出，对于非友情链接的PR值输出，我们可以加上<code>nofollow</code>便签避免不必要的PR输出。<br><img src="https://img.v2gr.com/2015/06/link-arao-pr-out.jpg" alt="araome友情链接检测结果"><br>以hexo的NexT主题为例，需要修改两处<br>a. 找到footer.swig,路径在<code>your-hexo-site\themes\next\layout\_partials</code>，将下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;https://hexo.io&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;https://hexo.io&quot; rel=&quot;external nofollow&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot; rel=&quot;external nofollow&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>b. 修改<code>sidebar.swig</code>文件，路径在<code>your-hexo-site\themes\next\layout\_macro</code>，将下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&#123;&#123; link &#125;&#125;&quot; target=&quot;_blank&quot;&gt;&#123;&#123; name &#125;&#125;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&#123;&#123; link &#125;&#125;&quot; target=&quot;_blank&quot; rel=&quot;external nofollow&quot;&gt;&#123;&#123; name &#125;&#125;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>将下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://creativecommons.org/licenses/&#123;&#123; theme.creative_commons &#125;&#125;/4.0&quot; class=&quot;cc-opacity&quot; target=&quot;_blank&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://creativecommons.org/licenses/&#123;&#123; theme.creative_commons &#125;&#125;/4.0&quot; class=&quot;cc-opacity&quot; target=&quot;_blank&quot; rel=&quot;external nofollow&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>完成效果（我的是新站，目前没友链）：<br><img src="https://img.v2gr.com/2015/06/link-arao-pr-none.jpg" alt="araome友情链接检测结果没链接"></p>
+<h2 id="让你的关键字出现在title标题里"><a href="#让你的关键字出现在title标题里" class="headerlink" title="让你的关键字出现在title标题里"></a>让你的关键字出现在<code>title</code>标题里</h2><p>关键字出现在<code>title</code>标题里是有利于seo优化的，前提是你的目标关键词已经确定好。如果确定好的话，尽可能让它们在<code>title</code>标题尽量靠前，同时标题总字数注意控制在80个字符以内，切勿堆砌关键字。<code>title</code>的标点符号：关键词分割符号英文半角逗号，_ | ;品牌与关键词分割符号 -<br>具体实现方法参考<a href="/2015/hexo-next-theme-optimize-base/#hexo_NexT主题首页title的优化">《hexo NexT主题首页title的优化》</a></p>
 
       
     </div>
@@ -522,11 +566,13 @@
         
         <div class="post-tags">
           
+            <a href="/tags/NexT主题/" rel="tag"># NexT主题</a>
+          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
           
-            <a href="/tags/typecho/" rel="tag"># typecho</a>
+            <a href="/tags/seo/" rel="tag"># seo</a>
           
-            <a href="/tags/lazyload/" rel="tag"># lazyload</a>
+            <a href="/tags/sitemap/" rel="tag"># sitemap</a>
           
         </div>
       
@@ -539,8 +585,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/website/hexo-next-theme-optimize-duoshuo/" rel="next" title="动动手指，给你的Hexo站点添加最近访客（多说篇）">
-                <i class="fa fa-chevron-left"></i> 动动手指，给你的Hexo站点添加最近访客（多说篇）
+              <a href="/website/hexo-next-theme-optimize-base.html" rel="next" title="动动手指，NexT主题与Hexo更搭哦（基础篇）">
+                <i class="fa fa-chevron-left"></i> 动动手指，NexT主题与Hexo更搭哦（基础篇）
               </a>
             
           </div>
@@ -549,8 +595,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/website/make-duoshuo-faster-qiniu-cdn/" rel="prev" title="多说评论不稳定，加载速度慢优化方法">
-                多说评论不稳定，加载速度慢优化方法 <i class="fa fa-chevron-right"></i>
+              <a href="/website/hexo-next-theme-optimize-duoshuo.html" rel="prev" title="动动手指，给你的Hexo站点添加最近访客（多说篇）">
+                动动手指，给你的Hexo站点添加最近访客（多说篇） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -742,7 +788,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于lazyload图片延迟加载简单介绍"><span class="nav-number">1.</span> <span class="nav-text">关于lazyload图片延迟加载简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎样使用lazyload？"><span class="nav-number">2.</span> <span class="nav-text">怎样使用lazyload？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#先说下我的SEO经历吧！"><span class="nav-number">1.</span> <span class="nav-text">先说下我的SEO经历吧！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给你的hexo站点添加sitemap网站地图"><span class="nav-number">2.</span> <span class="nav-text">给你的hexo站点添加sitemap网站地图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给你的hexo网站添加蜘蛛协议robots-txt"><span class="nav-number">3.</span> <span class="nav-text">给你的hexo网站添加蜘蛛协议robots.txt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给非友情链接的出站链接添加-nofollow标签"><span class="nav-number">4.</span> <span class="nav-text">给非友情链接的出站链接添加 nofollow标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#让你的关键字出现在title标题里"><span class="nav-number">5.</span> <span class="nav-text">让你的关键字出现在title标题里</span></a></li></ol></div>
             
 
           </div>
@@ -901,7 +947,7 @@
   
     <script>
   window.livereOptions = {
-    refer: 'website/hexo-optimize-pic-lazyload/'
+    refer: 'website/hexo-next-theme-optimize-seo.html'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];

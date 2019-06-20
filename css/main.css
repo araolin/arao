@@ -1774,7 +1774,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #26ffff;
+  background: #9fff3e;
 }
 .feed-link,
 .chat {
@@ -2888,6 +2888,9 @@ code {
 .back-to-top {
   background: #a40000 !important;
 }
+.sidebar-toggle {
+  background: #a40000 !important;
+}
 ::selection {
   background: #a40000;
   color: #f7f7f7 0;
@@ -2895,4 +2898,9 @@ code {
 ::-moz-selection {
   background: #a40000;
   color: #f7f7f7;
+}
+@media (max-width: 567px) {
+  .content {
+    padding: 60px 10px !important;
+  }
 }

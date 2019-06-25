@@ -26,18 +26,18 @@
 
   
   
-  <style>
-.pace .pace-progress {
-background: #1E92FB; /*进度条颜色*/
-height: 3px;
-}
-.pace .pace-progress-inner {
-box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
-}
-.pace .pace-activity {
-border-top-color: #1E92FB;    /*上边框颜色*/
-border-left-color: #1E92FB;    /*左边框颜色*/
-}
+<style>
+    .pace .pace-progress {
+    background: #a40000 !important; /*进度条颜色*/
+    height: 3px !important;
+    }
+    .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #a40000, 0 0 5px #a40000 !important; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    border-top-color: #a40000 !important;    /*上边框颜色*/
+    border-left-color: #a40000 !important;    /*左边框颜色*/
+    }
 </style>
     
     
@@ -490,6 +490,34 @@ border-left-color: #1E92FB;    /*左边框颜色*/
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -523,28 +551,28 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 <li>好吧，其实最让我不舍的是多说最近访客功能，这是其他社会化评论系统无法提供的。如何让你的博客支持多说最近访客可以参考我的这篇文章<a href="/2015/hexo-next-theme-optimize-duoshuo/">《动动手指，给你的Hexo站点添加最近访客（多说篇）》</a>。</li>
 </ul>
 <h2 id="多说评论不稳定，加载速度慢怎么办？"><a href="#多说评论不稳定，加载速度慢怎么办？" class="headerlink" title="多说评论不稳定，加载速度慢怎么办？"></a>多说评论不稳定，加载速度慢怎么办？</h2><h3 id="把多说评论依赖的embed-js放置底部"><a href="#把多说评论依赖的embed-js放置底部" class="headerlink" title="把多说评论依赖的embed.js放置底部"></a>把多说评论依赖的<code>embed.js</code>放置底部</h3><p>Yahoo性能中心总结的高性能网站设计的规则提及，把<code>Javascript</code>脚本尽量放到页面底部加载，这里不多说。<br><code>wordpress</code>多说插件提供了在网页底部插入多说核心脚本<code>embed.js</code>这选项供用户选择，比较人性化。其他博客程序的话可以把<code>embed.js</code>放置到主题的footer底部加载。这里以<code>hexo</code>静态博客程序，<code>NexT.Mist</code>主题举个栗子，这里需要修改的文件是<code>duoshuo.swig</code>，路径是<code>your-hexo-site\themes\next\layout\_scripts</code>目录下，将下面一段代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(document.getElementsByTagName(&apos;head&apos;)[0]</span><br></pre></td></tr></table></figure>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">document.getElementsByTagName</span>(<span class="symbol">'head</span>')[<span class="name">0</span>]</span><br></pre></td></tr></table></figure>
 
 <p>修改成下面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(document.getElementById(&apos;footer&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">document.getElementById</span>(<span class="symbol">'footer</span>')</span><br></pre></td></tr></table></figure>
 
 <p>即可。</p>
 <h3 id="并不是所有页面都需要加载多说embed-js，一些没用上多说服务的页面就没必要加载了"><a href="#并不是所有页面都需要加载多说embed-js，一些没用上多说服务的页面就没必要加载了" class="headerlink" title="并不是所有页面都需要加载多说embed.js，一些没用上多说服务的页面就没必要加载了"></a>并不是所有页面都需要加载多说<code>embed.js</code>，一些没用上多说服务的页面就没必要加载了</h3><p>如果在一些没必要加载多说<code>embed.js</code>的页面你却加载了，这样也是会影响页面打开速度的。hexo的<a href="/tags/NexT%E4%B8%BB%E9%A2%98/">next主题</a>这方面就处理的很好。next主题仅仅在首页（首页文章评论数需要引用多说embed.js）和内页（内页多说评论和多说分享依赖多说脚本）加载多说核心脚本<code>embed.js</code>，其它页面概不加载，next主题不愧是<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">《有那些好看的hexo主题? 》</a>深受<code>hexo</code>博主欢迎的一个<code>hexo</code>主题，细节方面处理的很好，感谢主题作者<code>iissnan</code>。
 顺便提一下，我的<code>hexo</code>网站留言是我在<code>next</code>主题基础上加的，因为用到多说评论和多说最近访客，所以也是需要加载多说核心<code>JS</code>的，<code>hexo</code>留言页具体实现可以参考我这篇文章<a href="/2015/hexo-next-theme-optimize-base/">《动动手指，NexT主题与Hexo更搭哦（基础篇）》</a></p>
 <h3 id="巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速"><a href="#巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速" class="headerlink" title="巧用七牛镜像存储实现多说JS和CSS静态文件CDN加速"></a>巧用七牛镜像存储实现多说<code>JS</code>和<code>CSS</code>静态文件<code>CDN</code>加速</h3><p><strong>这(shang)是(mian)本(zhu)文(yao)的(wei)核(le)心(S)部(E)分(O)！</strong><br>多说在我们的网站前台主要依赖加载<code>embed.js</code>、<code>embed.xxx.css</code>这两个文件提供服务，其中<code>embed.js</code>是多说评论的核心脚本，多说样式<code>embed.xxx.css</code>也是靠这脚本调用加载的，而<code>embed.xxx.css</code>又包含多说评论样式和多说分享样式。这两个文件存放在多说<code>static.duoshuo.com</code>二级域名下，我们可以把这两个静态文件放在七牛云存储，获得更多的加速节点来加速这两个文件。利用七牛镜像存储实现多说静态文件CDN后，我们请求的是七牛加速节点，减少对多说服务器的请求，多少减少了多说服务器负担，越多站长加入，效果更明显，多说服务器也相对稳定些。<br>具体实现步骤：<br>1、 在七牛新建一个空间<strong>还没七牛账号可以<a href="https://portal.qiniu.com/signup?code=3lpah2waav2vm" target="_blank" rel="noopener">点击这里</a>注册,有<code>edu</code>邮箱的可以参与<a href="https://www.arao.me/2015/qiniu-qingcong-1k-diyongquan/" target="_blank" rel="noopener">《青葱创业计划：凭edu邮箱免费领取七牛1000元抵用券》</a></strong>，点击<strong>空间设置</strong> &gt; <strong>基本设置</strong> &gt; <strong>一键加速网站</strong>，镜像源地址填写<code>static.duoshuo.com</code>，提交<br><img src="https://img.v2gr.com/2015/07/qiniu-static-duoshuo.jpg" alt="七牛镜像存储加速多说"><br>加速成功后，可以通过七牛提供的空间访问域名访问到多说镜像网站，也可以自定义域名。我使用的是自定义域名<code>araome.yiluup.com</code>，访问结果<br><img src="https://img.v2gr.com/2015/07/duoshuo-jingxiang-qiniu-cdn.jpg" alt="多说镜像网站"><br>2、 下载<a href="//static.duoshuo.com/embed.js">多说核心脚本embed.js</a>，需要更改一处地方代码，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function n(e)&#123;j.theme=e,&quot;none&quot;!=e&amp;&amp;o.injectStylesheet(j.STATIC_URL+&quot;/styles/embed&quot;+(e?&quot;.&quot;+e+&quot;.css?&quot;+R[e]:&quot;.&quot;+short_name)+&quot;.css&quot;)&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">n</span><span class="params">(e)</span></span>&#123;j.theme=e,<span class="string">"none"</span>!=e&amp;&amp;o.injectStylesheet(j.STATIC_URL+<span class="string">"/styles/embed"</span>+(e?<span class="string">"."</span>+e+<span class="string">".css?"</span>+R[e]:<span class="string">"."</span>+short_name)+<span class="string">".css"</span>)&#125;</span><br></pre></td></tr></table></figure>
 
 <p>上面代码应该是调用多说样式<code>embed.xxx.css</code>，我们需要修改成我们七牛镜像的多说样式，只需把<code>j.STATIC_URL</code>更改成七牛空间访问域名，例如我修改成<code>&amp;quot;&amp;quot;</code>。更改后另存为<code>dsembed.js</code>（重命名主要防止与七牛镜像中的embed.js冲突）。最后上传到七牛空间里。现在你可以通过地址<code>/dsembed.js</code>访问经过七牛CDN加速后的多说核心脚本。<br>3、 把多说默认引入<code>static.duoshuo.com</code>域名下的<code>embed.js</code>更改成七牛空间更改后的<code>dsembed.js</code>即可。<br>这里以多说通用代码为例，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 多说评论框 start --&gt;</span><br><span class="line">	&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;请将此处替换成文章在你的站点中的ID&quot; data-title=&quot;请替换成文章的标题&quot; data-url=&quot;请替换成文章的网址&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;!-- 多说评论框 end --&gt;</span><br><span class="line">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var duoshuoQuery = &#123;short_name:&quot;araolin&quot;&#125;;</span><br><span class="line">	(function() &#123;</span><br><span class="line">		var ds = document.createElement(&apos;script&apos;);</span><br><span class="line">		ds.type = &apos;text/javascript&apos;;ds.async = true;</span><br><span class="line">		ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;</span><br><span class="line">		ds.charset = &apos;UTF-8&apos;;</span><br><span class="line">		(document.getElementsByTagName(&apos;head&apos;)[0] </span><br><span class="line">		 || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</span><br><span class="line">	&#125;)();</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;!-- 多说公共JS代码 end --&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-thread"</span> <span class="attr">data-thread-key</span>=<span class="string">"请将此处替换成文章在你的站点中的ID"</span> <span class="attr">data-title</span>=<span class="string">"请替换成文章的标题"</span> <span class="attr">data-url</span>=<span class="string">"请替换成文章的网址"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">"araolin"</span>&#125;;</span></span><br><span class="line"><span class="actionscript">	(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="actionscript">		ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">		ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span></span><br><span class="line"><span class="actionscript">		ds.charset = <span class="string">'UTF-8'</span>;</span></span><br><span class="line"><span class="javascript">		(<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] </span></span><br><span class="line"><span class="javascript">		 || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span></span><br><span class="line">	&#125;)();</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><code>embed.js</code>引入的代码是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ds.src</span> = (document.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
 
 <p>这里需要更改成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ds.src = (document.location.protocol == &apos;这里是你的七牛空间embed.js的地址&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ds.src</span> = (document.location.protocol == <span class="string">'这里是你的七牛空间embed.js的地址'</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
 
 <p>以我的为例，我更改成了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ds.src = (document.location.protocol == &apos;/dsembed.js&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ds.src</span> = (document.location.protocol == <span class="string">'/dsembed.js'</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
 
 <p>如果你是hexo Next主题的话，需要更改的文件是<code>duoshuo.swig</code>，具体路径在<code>your-hexo-site\themes\next\layout\_scripts\comments</code>目录里。<br>最后值的注意的是，如果你的<code>https</code>站点的话，需要在七牛云储存配置<code>https</code>，最后通过七牛提供的<code>https://dn-yourdomain.qbox.me</code>的域名访问多说镜像静态文件，具体实现就不赘述了。</p>
 <h3 id="多说静态文件经过七牛CDN加速效果"><a href="#多说静态文件经过七牛CDN加速效果" class="headerlink" title="多说静态文件经过七牛CDN加速效果"></a>多说静态文件经过七牛CDN加速效果</h3><p>没加速之前，经百度站长平台网站速度诊断工具测试，多说<code>dsembed.js</code>花了接近两秒时间来加载；<br><img src="https://img.v2gr.com/2015/07/duoshuo-cdn-before.jpg" alt="多说CDN加速前"><br>利用七牛镜像存储实现多说JS和CSS静态文件CDN后，再重新测试，足足省了1秒多。<br><img src="https://img.v2gr.com/2015/07/duoshuo-cdn-after.jpg" alt="多说CDN加速后"></p>
@@ -578,7 +606,7 @@ border-left-color: #1E92FB;    /*左边框颜色*/
       </div>
       <div class="post-copyright-link">
         <strong>本文链接：</strong>
-        <a href="/website/make-duoshuo-faster-qiniu-cdn.html" title="多说评论不稳定，加载速度慢优化方法">website/make-duoshuo-faster-qiniu-cdn.html</a>
+        <a href="/website/make-duoshuo-faster-qiniu-cdn.html" title="多说评论不稳定，加载速度慢优化方法">https://www.arao.me/website/make-duoshuo-faster-qiniu-cdn.html</a>
       </div>
       <div class="post-copyright-license">
         <strong>版权声明： </strong>
@@ -831,6 +859,240 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/区" title="区">0</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/块" title="块">1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/狗" title="狗">2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/开" title="开">3</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/发" title="发">4</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">5</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">7</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">8</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">9</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">10</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">11</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">12</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">13</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">14</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">15</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">16</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">17</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">18</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">19</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">20</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">21</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">22</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">23</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">24</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">25</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">26</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">27</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">28</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/微" title="微">29</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/商" title="商">30</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/系" title="系">31</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/统" title="统">32</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">33</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">34</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">35</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">36</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">37</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">38</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">39</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">40</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">41</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">42</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">43</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">44</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">45</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">46</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">47</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">48</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">49</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">50</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">51</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">52</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">53</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">54</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">55</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
             
@@ -879,7 +1141,21 @@ border-left-color: #1E92FB;    /*左边框颜色*/
   <span class="author" itemprop="copyrightHolder">ARao Lin</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">21k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">19 分钟</span>
   
 </div>
 
@@ -1059,10 +1335,13 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
   
 
-</body>
-</html>
-<!--动态背景轮播-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+  <!--动态背景轮播-->
+<script src="//cdn.bootcss.com/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <script>
   $.backstretch([  
           "/images/background/1.jpg",
@@ -1072,3 +1351,6 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 </script>
 
 <script type="text/javascript" src="/js/jiazhiguan.js"></script>
+
+</body>
+</html>

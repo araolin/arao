@@ -26,18 +26,18 @@
 
   
   
-  <style>
-.pace .pace-progress {
-background: #1E92FB; /*进度条颜色*/
-height: 3px;
-}
-.pace .pace-progress-inner {
-box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
-}
-.pace .pace-activity {
-border-top-color: #1E92FB;    /*上边框颜色*/
-border-left-color: #1E92FB;    /*左边框颜色*/
-}
+<style>
+    .pace .pace-progress {
+    background: #a40000 !important; /*进度条颜色*/
+    height: 3px !important;
+    }
+    .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #a40000, 0 0 5px #a40000 !important; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    border-top-color: #a40000 !important;    /*上边框颜色*/
+    border-left-color: #a40000 !important;    /*左边框颜色*/
+    }
 </style>
     
     
@@ -486,6 +486,34 @@ border-left-color: #1E92FB;    /*左边框颜色*/
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -513,10 +541,10 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 <li><p>首先，<a href="/tw_cn.zip">点击这里</a>右键另存下载简繁字体切换所需的<code>tw_cn.js</code>文件，上传到自己的网站空间。</p>
 </li>
 <li><p>其次，修改模板，在你想要显示简繁转换按钮的地方加上下面一段代码，正常情况添加到<code>header.php</code>或者<code>siderbar.php</code>就可以了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a id=&quot;translateLink&quot; href=&quot;javascript:translatePage();&quot;&gt;繁體&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">id</span>=<span class="string">"translateLink"</span> <span class="attribute">href</span>=<span class="string">"javascript:translatePage();"</span>&gt;繁體&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>最后，在footer.php添加下面代码，记得更改<code>cookieDomain</code>这一项。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/tw_cn.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体</span><br><span class="line">var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0</span><br><span class="line">var cookieDomain = &quot;https://www.arao.me/&quot;; //Cookie地址, 一定要设定, 通常为你的网址</span><br><span class="line">var msgToTraditionalChinese = &quot;繁體&quot;; //此处可以更改为你想要显示的文字</span><br><span class="line">var msgToSimplifiedChinese = &quot;简体&quot;; //同上，但两处均不建议更改</span><br><span class="line">var translateButtonId = &quot;translateLink&quot;; //默认互换id</span><br><span class="line">translateInitilization();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/tw_cn.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> defaultEncoding = <span class="number">2</span>; <span class="comment">//网站编写字体是否繁体，1-繁体，2-简体</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> translateDelay = <span class="number">0</span>; <span class="comment">//延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> cookieDomain = <span class="string">"https://www.arao.me/"</span>; <span class="comment">//Cookie地址, 一定要设定, 通常为你的网址</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> msgToTraditionalChinese = <span class="string">"繁體"</span>; <span class="comment">//此处可以更改为你想要显示的文字</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> msgToSimplifiedChinese = <span class="string">"简体"</span>; <span class="comment">//同上，但两处均不建议更改</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> translateButtonId = <span class="string">"translateLink"</span>; <span class="comment">//默认互换id</span></span></span><br><span class="line">translateInitilization();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -550,7 +578,7 @@ border-left-color: #1E92FB;    /*左边框颜色*/
       </div>
       <div class="post-copyright-link">
         <strong>本文链接：</strong>
-        <a href="/website/hexo-support-jian-fan-language.html" title="三步让你的网站支持简体繁体切换">website/hexo-support-jian-fan-language.html</a>
+        <a href="/website/hexo-support-jian-fan-language.html" title="三步让你的网站支持简体繁体切换">https://www.arao.me/website/hexo-support-jian-fan-language.html</a>
       </div>
       <div class="post-copyright-license">
         <strong>版权声明： </strong>
@@ -790,6 +818,240 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/区" title="区">0</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/块" title="块">1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/狗" title="狗">2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/开" title="开">3</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/发" title="发">4</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">5</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">7</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">8</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">9</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">10</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">11</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">12</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">13</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">14</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">15</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">16</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">17</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">18</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">19</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">20</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">21</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">22</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">23</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">24</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">25</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">26</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">27</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">28</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/微" title="微">29</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/商" title="商">30</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/系" title="系">31</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/统" title="统">32</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">33</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">34</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">35</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">36</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">37</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">38</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">39</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">40</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">41</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">42</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">43</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">44</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">45</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">46</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">47</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">48</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">49</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">50</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">51</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">52</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">53</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">54</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">55</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
             
@@ -821,7 +1083,21 @@ border-left-color: #1E92FB;    /*左边框颜色*/
   <span class="author" itemprop="copyrightHolder">ARao Lin</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">21k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">19 分钟</span>
   
 </div>
 
@@ -1001,10 +1277,13 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
   
 
-</body>
-</html>
-<!--动态背景轮播-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+  <!--动态背景轮播-->
+<script src="//cdn.bootcss.com/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <script>
   $.backstretch([  
           "/images/background/1.jpg",
@@ -1014,3 +1293,6 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 </script>
 
 <script type="text/javascript" src="/js/jiazhiguan.js"></script>
+
+</body>
+</html>

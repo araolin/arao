@@ -26,18 +26,18 @@
 
   
   
-  <style>
-.pace .pace-progress {
-background: #1E92FB; /*进度条颜色*/
-height: 3px;
-}
-.pace .pace-progress-inner {
-box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
-}
-.pace .pace-activity {
-border-top-color: #1E92FB;    /*上边框颜色*/
-border-left-color: #1E92FB;    /*左边框颜色*/
-}
+<style>
+    .pace .pace-progress {
+    background: #a40000 !important; /*进度条颜色*/
+    height: 3px !important;
+    }
+    .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #a40000, 0 0 5px #a40000 !important; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    border-top-color: #a40000 !important;    /*上边框颜色*/
+    border-left-color: #a40000 !important;    /*左边框颜色*/
+    }
 </style>
     
     
@@ -488,6 +488,34 @@ border-left-color: #1E92FB;    /*左边框颜色*/
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -511,37 +539,37 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 <h3 id="引入多说通用JS代码"><a href="#引入多说通用JS代码" class="headerlink" title="引入多说通用JS代码"></a>引入多说通用JS代码</h3><p>注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用<code>next</code>主题的站长可以参考我的<a href="/2015/hexo-next-theme-optimize-base/#NexT主题创建_“留言”_页面">《NexT主题创建“留言”页面》</a>实现指定某些页面添加多说评论系统。</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--多说js加载开始，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var duoshuoQuery = &#123;short_name:&quot;您的多说二级域名&quot;&#125;;</span><br><span class="line">(function() &#123;</span><br><span class="line">    var ds = document.createElement(&apos;script&apos;);</span><br><span class="line">    ds.type = &apos;text/javascript&apos;;ds.async = true;</span><br><span class="line">    ds.src = &apos;//static.duoshuo.com/embed.js&apos;;</span><br><span class="line">    ds.charset = &apos;UTF-8&apos;;</span><br><span class="line">    (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;!--多说js加载结束，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--多说js加载开始，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">"您的多说二级域名"</span>&#125;;</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="actionscript">    ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span></span><br><span class="line"><span class="actionscript">    ds.src = <span class="string">'//static.duoshuo.com/embed.js'</span>;</span></span><br><span class="line"><span class="actionscript">    ds.charset = <span class="string">'UTF-8'</span>;</span></span><br><span class="line"><span class="javascript">    (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span></span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--多说js加载结束，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="往你想添加的页面增加下面的一小段代码即可。"><a href="#往你想添加的页面增加下面的一小段代码即可。" class="headerlink" title="往你想添加的页面增加下面的一小段代码即可。"></a>往你想添加的页面增加下面的一小段代码即可。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;28&quot; data-avatar-size=&quot;42&quot; id=&quot;ds-recent-visitors&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="往你想添加的页面增加下面的一小段代码即可。"><a href="#往你想添加的页面增加下面的一小段代码即可。" class="headerlink" title="往你想添加的页面增加下面的一小段代码即可。"></a>往你想添加的页面增加下面的一小段代码即可。</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="attribute">class</span>=<span class="string">"ds-recent-visitors"</span> <span class="attribute">data-num-items</span>=<span class="string">"28"</span> <span class="attribute">data-avatar-size</span>=<span class="string">"42"</span> <span class="attribute">id</span>=<span class="string">"ds-recent-visitors"</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p>其中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class=“ds-recent-visitors”    //指定显示最近访客容器</span><br><span class="line">data-num-items=“28”    //显示最近访客的数量</span><br><span class="line">data-avatar-size=“42”    //显示最近访客头像尺寸大小</span><br><span class="line">id=“ds-recent-visitors”    //为了调节最近访客样式加的</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">class</span>=“ds-recent-visitors”    //指定显示最近访客容器</span><br><span class="line"><span class="attr">data-num-items</span>=“<span class="number">28</span>”    //显示最近访客的数量</span><br><span class="line"><span class="attr">data-avatar-size</span>=“<span class="number">42</span>”    //显示最近访客头像尺寸大小</span><br><span class="line"><span class="attr">id</span>=“ds-recent-visitors”    //为了调节最近访客样式加的</span><br></pre></td></tr></table></figure>
 
 <p>我的hexo站点是通过直接生成了<code>guestbook</code>的<code>page</code>，然后直接在<code>/guestbook/</code>目录下的<code>index.md</code>添加了上面那段代码实现的。<br><img src="https://img.v2gr.com/2015/06/guestbook-index-md.jpg" alt="guestbook目录下的index.md代码"></p>
 <h3 id="修改hexo最近访客样式"><a href="#修改hexo最近访客样式" class="headerlink" title="修改hexo最近访客样式"></a>修改<a href="/tags/hexo%E6%9C%80%E8%BF%91%E8%AE%BF%E5%AE%A2/">hexo最近访客</a>样式</h3><p>通过<code>多说后台管理&gt;设置&gt;基本设置&gt;自定义CSS</code>修改最近访客<code>css</code>样式</p>
 <ul>
 <li>最近访客竖着排，改成排成一列</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#ds-recent-visitors .ds-avatar &#123;float:left&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> &#123;<span class="attribute">float</span>:left&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>最近访客头像样式css和评论样式统一</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#ds-reset .ds-avatar img,#ds-recent-visitors .ds-avatar img&#123;这里是你定义的多说头像样式css&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span>,<span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> img&#123;这里是你定义的多说头像样式css&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>最近访客头像样式css和评论样式css分开设置</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#ds-reset .ds-avatar img&#123;这里是自定义多说评论头像样式&#125;</span><br><span class="line">#ds-recent-visitors .ds-avatar img&#123;这里是自定义的多说最近访客头像样式css&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span> img&#123;这里是自定义多说评论头像样式&#125;</span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> img&#123;这里是自定义的多说最近访客头像样式css&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>我的整个多说自定义css，其中访客样式和评论样式统一</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#ds-reset .ds-avatar img,</span><br><span class="line">#ds-recent-visitors .ds-avatar img &#123;</span><br><span class="line">width: 54px;</span><br><span class="line">height: 54px;     /*设置图像的长和宽，这里要根据自己的评论框情况更改*/</span><br><span class="line">border-radius: 27px;     /*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/</span><br><span class="line">-webkit-border-radius: 27px;     /*圆角效果：兼容webkit浏览器*/</span><br><span class="line">-moz-border-radius: 27px;</span><br><span class="line">box-shadow: inset 0 -1px 0 #3333sf;     /*设置图像阴影效果*/</span><br><span class="line">-webkit-box-shadow: inset 0 -1px 0 #3333sf;</span><br><span class="line">-webkit-transition: 0.4s;</span><br><span class="line">-webkit-transition: -webkit-transform 0.4s ease-out;</span><br><span class="line">transition: transform 0.4s ease-out;     /*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/</span><br><span class="line">-moz-transition: -moz-transform 0.4s ease-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset .ds-avatar img:hover,</span><br><span class="line">#ds-recent-visitors .ds-avatar img:hover &#123;</span><br><span class="line"></span><br><span class="line">/*设置鼠标悬浮在头像时的CSS样式*/    box-shadow: 0 0 10px #fff;</span><br><span class="line">rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line">-webkit-box-shadow: 0 0 10px #fff;</span><br><span class="line">rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line">transform: rotateZ(360deg);     /*图像旋转360度*/</span><br><span class="line">-webkit-transform: rotateZ(360deg);</span><br><span class="line">-moz-transform: rotateZ(360deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-textarea-wrapper textarea &#123;</span><br><span class="line">background: url(https://ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg) right no-repeat;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-recent-visitors .ds-avatar &#123;</span><br><span class="line">float: left</span><br><span class="line">&#125;</span><br><span class="line">/*隐藏多说底部版权*/</span><br><span class="line">#ds-thread #ds-reset .ds-powered-by &#123;</span><br><span class="line">display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span>,</span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">54px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">54px</span>;     <span class="comment">/*设置图像的长和宽，这里要根据自己的评论框情况更改*/</span></span><br><span class="line"><span class="attribute">border-radius</span>: <span class="number">27px</span>;     <span class="comment">/*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/</span></span><br><span class="line">-webkit-<span class="attribute">border-radius</span>: <span class="number">27px</span>;     <span class="comment">/*圆角效果：兼容webkit浏览器*/</span></span><br><span class="line">-moz-<span class="attribute">border-radius</span>: <span class="number">27px</span>;</span><br><span class="line"><span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">0</span> <span class="number">#3333</span>sf;     <span class="comment">/*设置图像阴影效果*/</span></span><br><span class="line">-webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">0</span> <span class="number">#3333</span>sf;</span><br><span class="line">-webkit-<span class="attribute">transition</span>: <span class="number">0.4s</span>;</span><br><span class="line">-webkit-<span class="attribute">transition</span>: -webkit-transform <span class="number">0.4s</span> ease-out;</span><br><span class="line"><span class="attribute">transition</span>: transform <span class="number">0.4s</span> ease-out;     <span class="comment">/*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/</span></span><br><span class="line">-moz-<span class="attribute">transition</span>: -moz-transform <span class="number">0.4s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span>:hover,</span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span>:hover &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*设置鼠标悬浮在头像时的CSS样式*/</span>    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">#fff</span>;</span><br><span class="line">rgba(255, 255, 255, <span class="selector-class">.6</span>), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line">-webkit-<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">#fff</span>;</span><br><span class="line">rgba(255, 255, 255, <span class="selector-class">.6</span>), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line"><span class="attribute">transform</span>: rotateZ(<span class="number">360deg</span>);     <span class="comment">/*图像旋转360度*/</span></span><br><span class="line">-webkit-<span class="attribute">transform</span>: rotateZ(<span class="number">360deg</span>);</span><br><span class="line">-moz-<span class="attribute">transform</span>: rotateZ(<span class="number">360deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> <span class="selector-tag">textarea</span> &#123;</span><br><span class="line"><span class="attribute">background</span>: url(https://ww4.sinaimg.cn/small/<span class="number">649</span>a4735gw1et7gnhy5fej20zk0m8q3q.jpg) right no-repeat;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> &#123;</span><br><span class="line"><span class="attribute">float</span>: left</span><br><span class="line">&#125;</span><br><span class="line">/*隐藏多说底部版权*/</span><br><span class="line"><span class="number">#d</span>s-thread <span class="number">#d</span>s-reset .ds-powered-by &#123;</span><br><span class="line">display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="如何扒别人多说自定义样式"><a href="#如何扒别人多说自定义样式" class="headerlink" title="如何扒别人多说自定义样式"></a>如何扒别人<a href="/tags/%E5%A4%9A%E8%AF%B4/">多说</a>自定义样式</h3><p>爱美之心人皆有之！有时候看到别人博客的多说样式很好看，总想扒下来搞到自己博客怎么办？貌似扒人家东西有点不道德哦！<br>按F12打开浏览器调试代码的功能，多说自定义样式css一般在<code>&lt;head&gt;&lt;/head&gt;</code>里，在</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;//static.duoshuo.com/styles/embed.default.css?XXXXXXX.css&quot;&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;这里是多说自定义css&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link <span class="attribute">type</span>=<span class="string">"text/css"</span> <span class="attribute">rel</span>=<span class="string">"stylesheet"</span> <span class="attribute">href</span>=<span class="string">"//static.duoshuo.com/styles/embed.default.css?XXXXXXX.css"</span>&gt;</span><br><span class="line">&lt;style <span class="attribute">type</span>=<span class="string">"text/css"</span>&gt;这里是多说自定义css&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
 <p>里面，这样你就轻松地扒出来想要的多说自定义CSS样式了。Enjoy It!
 <img src="https://img.v2gr.com/2015/06/duoshuo-css-f12.jpg" alt="F12调试工具下的多说自定义css"></p>
@@ -574,7 +602,7 @@ border-left-color: #1E92FB;    /*左边框颜色*/
       </div>
       <div class="post-copyright-link">
         <strong>本文链接：</strong>
-        <a href="/website/hexo-next-theme-optimize-duoshuo.html" title="动动手指，给你的Hexo站点添加最近访客（多说篇）">website/hexo-next-theme-optimize-duoshuo.html</a>
+        <a href="/website/hexo-next-theme-optimize-duoshuo.html" title="动动手指，给你的Hexo站点添加最近访客（多说篇）">https://www.arao.me/website/hexo-next-theme-optimize-duoshuo.html</a>
       </div>
       <div class="post-copyright-license">
         <strong>版权声明： </strong>
@@ -829,6 +857,240 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/区" title="区">0</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/块" title="块">1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/狗" title="狗">2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/开" title="开">3</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/发" title="发">4</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">5</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">7</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">8</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">9</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">10</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">11</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">12</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">13</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">14</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">15</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">16</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">17</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">18</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">19</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">20</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">21</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">22</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">23</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">24</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">25</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">26</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">27</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">28</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/微" title="微">29</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/商" title="商">30</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/系" title="系">31</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/统" title="统">32</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">33</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">34</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">35</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">36</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">37</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">38</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">39</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">40</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">41</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">42</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">43</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">44</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">45</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">46</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">47</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">48</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">49</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">50</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">51</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">52</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">53</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">54</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">55</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
             
@@ -877,7 +1139,21 @@ border-left-color: #1E92FB;    /*左边框颜色*/
   <span class="author" itemprop="copyrightHolder">ARao Lin</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">21k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">19 分钟</span>
   
 </div>
 
@@ -1057,10 +1333,13 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
   
 
-</body>
-</html>
-<!--动态背景轮播-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+  <!--动态背景轮播-->
+<script src="//cdn.bootcss.com/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <script>
   $.backstretch([  
           "/images/background/1.jpg",
@@ -1070,3 +1349,6 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 </script>
 
 <script type="text/javascript" src="/js/jiazhiguan.js"></script>
+
+</body>
+</html>

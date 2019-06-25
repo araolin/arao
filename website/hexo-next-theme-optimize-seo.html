@@ -26,18 +26,18 @@
 
   
   
-  <style>
-.pace .pace-progress {
-background: #1E92FB; /*进度条颜色*/
-height: 3px;
-}
-.pace .pace-progress-inner {
-box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
-}
-.pace .pace-activity {
-border-top-color: #1E92FB;    /*上边框颜色*/
-border-left-color: #1E92FB;    /*左边框颜色*/
-}
+<style>
+    .pace .pace-progress {
+    background: #a40000 !important; /*进度条颜色*/
+    height: 3px !important;
+    }
+    .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #a40000, 0 0 5px #a40000 !important; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    border-top-color: #a40000 !important;    /*上边框颜色*/
+    border-left-color: #a40000 !important;    /*左边框颜色*/
+    }
 </style>
     
     
@@ -488,6 +488,34 @@ border-left-color: #1E92FB;    /*左边框颜色*/
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -520,44 +548,44 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 <p>没想到吧，我还有SEO方面的隐藏技能吧！<br>呃，还是低调点好，毕竟是有好长一段时间没接触SEO了，很多东西已经没有时效性了，只能靠着以前一些经验做做<code>hexo</code>的<code>seo</code>小优化吧。</p>
 <h2 id="给你的hexo站点添加sitemap网站地图"><a href="#给你的hexo站点添加sitemap网站地图" class="headerlink" title="给你的hexo站点添加sitemap网站地图"></a>给你的<code>hexo</code>站点添加<code>sitemap</code>网站地图</h2><ol>
 <li><p>安装hexo的<a href="/tags/sitemap/">sitemap</a>网站地图生成插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-sitemap <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-baidu-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在你的<a href="/tags/hexo/">hexo</a>站点的<code>_config.yml</code>添加下面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># hexo sitemap网站地图</span><br><span class="line">sitemap:</span><br><span class="line">path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># hexo sitemap网站地图</span></span><br><span class="line"><span class="symbol">sitemap:</span></span><br><span class="line"><span class="symbol">path:</span> sitemap.xml</span><br><span class="line"><span class="symbol">baidusitemap:</span></span><br><span class="line"><span class="symbol">path:</span> baidusitemap.xml</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置成功后，<code>hexo</code>编译时会在<code>hexo</code>站点根目录生成<code>sitemap.xml</code>和<code>baidusitemap.xml</code><br>其中<code>sitemap.xml</code>适合提交给谷歌搜素引擎，<code>baidusitemap.xml</code>适合提交百度搜索引擎。<br>其次，在<code>robots.txt</code>中添加下面的一段代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sitemap: https://www.arao.me/sitemap.xml</span><br><span class="line">Sitemap: https://www.arao.me/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Sitemap:</span> <span class="string">https:</span><span class="comment">//www.arao.me/sitemap.xml</span></span><br><span class="line"><span class="string">Sitemap:</span> <span class="string">https:</span><span class="comment">//www.arao.me/baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <p>请自行改成自己的网站。</p>
 <h2 id="给你的hexo网站添加蜘蛛协议robots-txt"><a href="#给你的hexo网站添加蜘蛛协议robots-txt" class="headerlink" title="给你的hexo网站添加蜘蛛协议robots.txt"></a>给你的hexo网站添加蜘蛛协议robots.txt</h2><p>可以参考我的robots.txt，代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># hexo robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line"></span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /js/</span><br><span class="line">Disallow: /css/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line"></span><br><span class="line">Sitemap: https://www.arao.me/sitemap.xml</span><br><span class="line">Sitemap: https://www.arao.me/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># hexo robots.txt</span></span><br><span class="line">User-agent: *</span><br><span class="line"><span class="symbol">Allow:</span> /</span><br><span class="line"><span class="symbol">Allow:</span> <span class="meta-keyword">/archives/</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/vendors/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/js/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/css/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/fonts/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/vendors/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/fancybox/</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">Sitemap:</span> https:<span class="comment">//www.arao.me/sitemap.xml</span></span><br><span class="line"><span class="symbol">Sitemap:</span> https:<span class="comment">//www.arao.me/baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
 
 <p>把<code>robots.txt</code>放在你的<code>hexo</code>站点的<code>source</code>文件下即可。</p>
 <h2 id="给非友情链接的出站链接添加-nofollow标签"><a href="#给非友情链接的出站链接添加-nofollow标签" class="headerlink" title="给非友情链接的出站链接添加 nofollow标签"></a>给非友情链接的出站链接添加 <code>nofollow</code>标签</h2><p>经过chinaz站长工具友情链接检测，发现有不必要的PR值输出，对于非友情链接的PR值输出，我们可以加上<code>nofollow</code>便签避免不必要的PR输出。<br><img src="https://img.v2gr.com/2015/06/link-arao-pr-out.jpg" alt="araome友情链接检测结果"><br>以hexo的NexT主题为例，需要修改两处<br>a. 找到footer.swig,路径在<code>your-hexo-site\themes\next\layout\_partials</code>，将下面代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;https://hexo.io&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; __(<span class="name">'footer.powered'</span>, '&lt;a class=<span class="string">"theme-link"</span> href=<span class="string">"https://hexo.io"</span>&gt;Hexo&lt;/a&gt;') &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>改成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;https://hexo.io&quot; rel=&quot;external nofollow&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; __(<span class="name">'footer.powered'</span>, '&lt;a class=<span class="string">"theme-link"</span> href=<span class="string">"https://hexo.io"</span> rel=<span class="string">"external nofollow"</span>&gt;Hexo&lt;/a&gt;') &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>将下面代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">class</span>=<span class="string">"theme-link"</span> <span class="attribute">href</span>=<span class="string">"https://github.com/iissnan/hexo-theme-next"</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>改成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot; rel=&quot;external nofollow&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">class</span>=<span class="string">"theme-link"</span> <span class="attribute">href</span>=<span class="string">"https://github.com/iissnan/hexo-theme-next"</span> <span class="attribute">rel</span>=<span class="string">"external nofollow"</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>b. 修改<code>sidebar.swig</code>文件，路径在<code>your-hexo-site\themes\next\layout\_macro</code>，将下面代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&#123;&#123; link &#125;&#125;&quot; target=&quot;_blank&quot;&gt;&#123;&#123; name &#125;&#125;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; link &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span></span><span class="template-variable">&#123;&#123; name &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p>改成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&#123;&#123; link &#125;&#125;&quot; target=&quot;_blank&quot; rel=&quot;external nofollow&quot;&gt;&#123;&#123; name &#125;&#125;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;&#123; link &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"external nofollow"</span>&gt;</span></span><span class="template-variable">&#123;&#123; name &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p>将下面代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://creativecommons.org/licenses/&#123;&#123; theme.creative_commons &#125;&#125;/4.0&quot; class=&quot;cc-opacity&quot; target=&quot;_blank&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"https://creativecommons.org/licenses/&#123;&#123; theme.creative_commons &#125;&#125;/4.0"</span> <span class="attribute">class</span>=<span class="string">"cc-opacity"</span> <span class="attribute">target</span>=<span class="string">"_blank"</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>改成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://creativecommons.org/licenses/&#123;&#123; theme.creative_commons &#125;&#125;/4.0&quot; class=&quot;cc-opacity&quot; target=&quot;_blank&quot; rel=&quot;external nofollow&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="attribute">href</span>=<span class="string">"https://creativecommons.org/licenses/&#123;&#123; theme.creative_commons &#125;&#125;/4.0"</span> <span class="attribute">class</span>=<span class="string">"cc-opacity"</span> <span class="attribute">target</span>=<span class="string">"_blank"</span> <span class="attribute">rel</span>=<span class="string">"external nofollow"</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>完成效果（我的是新站，目前没友链）：<br><img src="https://img.v2gr.com/2015/06/link-arao-pr-none.jpg" alt="araome友情链接检测结果没链接"></p>
 <h2 id="让你的关键字出现在title标题里"><a href="#让你的关键字出现在title标题里" class="headerlink" title="让你的关键字出现在title标题里"></a>让你的关键字出现在<code>title</code>标题里</h2><p>关键字出现在<code>title</code>标题里是有利于seo优化的，前提是你的目标关键词已经确定好。如果确定好的话，尽可能让它们在<code>title</code>标题尽量靠前，同时标题总字数注意控制在80个字符以内，切勿堆砌关键字。<code>title</code>的标点符号：关键词分割符号英文半角逗号，_ | ;品牌与关键词分割符号 -<br>具体实现方法参考<a href="/2015/hexo-next-theme-optimize-base/#hexo_NexT主题首页title的优化">《hexo NexT主题首页title的优化》</a></p>
@@ -590,7 +618,7 @@ border-left-color: #1E92FB;    /*左边框颜色*/
       </div>
       <div class="post-copyright-link">
         <strong>本文链接：</strong>
-        <a href="/website/hexo-next-theme-optimize-seo.html" title="动动手指，不限于NexT主题的Hexo优化（SEO篇）">website/hexo-next-theme-optimize-seo.html</a>
+        <a href="/website/hexo-next-theme-optimize-seo.html" title="动动手指，不限于NexT主题的Hexo优化（SEO篇）">https://www.arao.me/website/hexo-next-theme-optimize-seo.html</a>
       </div>
       <div class="post-copyright-license">
         <strong>版权声明： </strong>
@@ -845,6 +873,240 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/区" title="区">0</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/块" title="块">1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/狗" title="狗">2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/开" title="开">3</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/发" title="发">4</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">5</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">7</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">8</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">9</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">10</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">11</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">12</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">13</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">14</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">15</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">16</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">17</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">18</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">19</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">20</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">21</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">22</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">23</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">24</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">25</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">26</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">27</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">28</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/微" title="微">29</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/商" title="商">30</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/系" title="系">31</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/统" title="统">32</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">33</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">34</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">35</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">36</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">37</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">38</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">39</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">40</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">41</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">42</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">43</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">44</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">45</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">46</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">47</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">48</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">49</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">50</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">51</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">52</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">53</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">54</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">55</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
             
@@ -893,7 +1155,21 @@ border-left-color: #1E92FB;    /*左边框颜色*/
   <span class="author" itemprop="copyrightHolder">ARao Lin</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">21k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">19 分钟</span>
   
 </div>
 
@@ -1073,10 +1349,13 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
   
 
-</body>
-</html>
-<!--动态背景轮播-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+  <!--动态背景轮播-->
+<script src="//cdn.bootcss.com/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <script>
   $.backstretch([  
           "/images/background/1.jpg",
@@ -1086,3 +1365,6 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 </script>
 
 <script type="text/javascript" src="/js/jiazhiguan.js"></script>
+
+</body>
+</html>

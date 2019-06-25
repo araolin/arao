@@ -26,18 +26,18 @@
 
   
   
-  <style>
-.pace .pace-progress {
-background: #1E92FB; /*进度条颜色*/
-height: 3px;
-}
-.pace .pace-progress-inner {
-box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
-}
-.pace .pace-activity {
-border-top-color: #1E92FB;    /*上边框颜色*/
-border-left-color: #1E92FB;    /*左边框颜色*/
-}
+<style>
+    .pace .pace-progress {
+    background: #a40000 !important; /*进度条颜色*/
+    height: 3px !important;
+    }
+    .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #a40000, 0 0 5px #a40000 !important; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    border-top-color: #a40000 !important;    /*上边框颜色*/
+    border-left-color: #a40000 !important;    /*左边框颜色*/
+    }
 </style>
     
     
@@ -486,6 +486,34 @@ border-left-color: #1E92FB;    /*左边框颜色*/
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -507,10 +535,10 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 <a id="more"></a>
 <p>当然啦，你的网站纯文字的，就没必要多搞个<code>jquery</code>插件了。</p>
 <h3 id="怎样使用lazyload？"><a href="#怎样使用lazyload？" class="headerlink" title="怎样使用lazyload？"></a>怎样使用<code>lazyload</code>？</h3><p>其实很简单，只需在你所使用头部<code>&lt;head&gt;&lt;/head&gt;</code>标签中插入下面一段代码即可,你也可以添加到<code>footer</code>中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">      jQuery(function() &#123;          </span><br><span class="line">          jQuery(&quot;img&quot;).lazyload(&#123;</span><br><span class="line">            placeholder:&quot;https://www.arao.me/loading.gif&quot;,</span><br><span class="line">              effect:&quot;fadeIn&quot;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">      jQuery(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;          </span></span><br><span class="line"><span class="actionscript">          jQuery(<span class="string">"img"</span>).lazyload(&#123;</span></span><br><span class="line"><span class="actionscript">            placeholder:<span class="string">"https://www.arao.me/loading.gif"</span>,</span></span><br><span class="line"><span class="actionscript">              effect:<span class="string">"fadeIn"</span></span></span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>以我的<code>hexo</code>网站和现在使用的next主题举例子，我是习惯把js添加到底部的，找到<code>_layout.swig</code>,路径在<code>your-hexo-site\themes\next\layout</code>,把前面的代码添加到<code>&lt;/body&gt;</code>标签前面就OK了。<br>如果你是hexo其他主题的，找到<code>footer.ejs</code>文件，一般是在<code>themes/你的主题/layout/_partial/</code>路径下，把上述的代码添加进去就行了。<br>若是使用了<code>wordpress</code>，<code>typecho</code>，<code>emlog</code>等其他博客后台的，也差不多这样改，往你的主题模板<code>&lt;/head&gt;</code>或者<code>&lt;/body&gt;</code>前上述代码即可,我的<code>typecho</code>网站也是这样实现图片延迟加载的。<br>如果你希望没看到图片前先加载200px，可以通过设置阀值来控制，具体实现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jQuery(&quot;img&quot;).lazyload(&#123; threshold : 200 &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">jQuery</span>("<span class="selector-tag">img</span>")<span class="selector-class">.lazyload</span>(&#123; <span class="attribute">threshold </span>: <span class="number">200</span> &#125;);</span><br></pre></td></tr></table></figure>
 
 <p>上面代码比较通用，基本满足你的网站图片延迟加载需求。<br>值得一提的是：</p>
 <ol>
@@ -546,7 +574,7 @@ border-left-color: #1E92FB;    /*左边框颜色*/
       </div>
       <div class="post-copyright-link">
         <strong>本文链接：</strong>
-        <a href="/website/hexo-optimize-pic-lazyload.html" title="动动手指，Hexo页面图片实现延迟加载(此方法无效)">website/hexo-optimize-pic-lazyload.html</a>
+        <a href="/website/hexo-optimize-pic-lazyload.html" title="动动手指，Hexo页面图片实现延迟加载(此方法无效)">https://www.arao.me/website/hexo-optimize-pic-lazyload.html</a>
       </div>
       <div class="post-copyright-license">
         <strong>版权声明： </strong>
@@ -799,6 +827,240 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/区" title="区">0</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/块" title="块">1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/狗" title="狗">2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/开" title="开">3</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/发" title="发">4</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">5</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">7</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">8</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">9</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">10</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">11</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">12</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">13</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">14</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">15</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">16</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">17</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">18</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">19</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">20</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">21</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">22</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">23</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">24</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">25</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">26</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">27</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">28</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/微" title="微">29</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/商" title="商">30</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/系" title="系">31</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/统" title="统">32</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/ " title=" ">33</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/h" title="h">34</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">35</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/t" title="t">36</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">37</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/s" title="s">38</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/:" title=":">39</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">40</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/" title="/">41</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">42</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">43</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/w" title="w">44</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">45</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/y" title="y">46</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/i" title="i">47</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/l" title="l">48</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">49</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/u" title="u">50</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/p" title="p">51</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/." title=".">52</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/c" title="c">53</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/o" title="o">54</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="/m" title="m">55</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
             
@@ -847,7 +1109,21 @@ border-left-color: #1E92FB;    /*左边框颜色*/
   <span class="author" itemprop="copyrightHolder">ARao Lin</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">21k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">19 分钟</span>
   
 </div>
 
@@ -1027,10 +1303,13 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 
   
 
-</body>
-</html>
-<!--动态背景轮播-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+  <!--动态背景轮播-->
+<script src="//cdn.bootcss.com/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <script>
   $.backstretch([  
           "/images/background/1.jpg",
@@ -1040,3 +1319,6 @@ border-left-color: #1E92FB;    /*左边框颜色*/
 </script>
 
 <script type="text/javascript" src="/js/jiazhiguan.js"></script>
+
+</body>
+</html>

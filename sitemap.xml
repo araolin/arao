@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wwww.arao.me/404.html</loc>
+    
+    <lastmod>2019-07-01T03:35:31.653Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wwww.arao.me/website/github-pages-araome-301-www.html</loc>
     
     <lastmod>2019-06-19T17:11:12.295Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://wwww.arao.me/website/hexo-next-theme-optimize-base.html</loc>
     
     <lastmod>2019-06-19T01:54:14.517Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wwww.arao.me/404.html</loc>
-    
-    <lastmod>2019-06-16T03:57:03.343Z</lastmod>
     
   </url>
   

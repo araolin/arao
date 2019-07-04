@@ -314,7 +314,7 @@
 
     
 
-    <a href="/guestbook" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>留言</a>
+    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>留言</a>
 
   </li>
 
@@ -398,7 +398,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ARao Lin">
       <meta itemprop="description" content="我们的征途是星辰大海">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://img.v2gr.com/xiongmao.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -592,6 +592,39 @@
       
     
     
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="ARao Lin 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="ARao Lin 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -652,11 +685,6 @@
           
 
   
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDc1NS8yMTI3Ng=="></div>
-    </div>
-
-  
 
 
 
@@ -683,7 +711,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="ARao Lin">
+              <img class="site-author-image" itemprop="image" src="https://img.v2gr.com/xiongmao.jpg" alt="ARao Lin">
             
               <p class="site-author-name" itemprop="name">ARao Lin</p>
               <div class="site-description motion-element" itemprop="description">我们的征途是星辰大海</div>
@@ -1012,21 +1040,6 @@
 
   
 
-
-  
-    <script>
-  window.livereOptions = {
-    refer: 'website/github-pages-araome-301-www.html'
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
 
   
 

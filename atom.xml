@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwww.arao.me/"/>
-  <updated>2019-06-19T01:55:52.501Z</updated>
+  <updated>2019-07-04T14:47:43.643Z</updated>
   <id>https://wwww.arao.me/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时隔四年久违的更新</title>
+    <link href="https://wwww.arao.me/life/long-lost-updates.html"/>
+    <id>https://wwww.arao.me/life/long-lost-updates.html</id>
+    <published>2019-07-04T14:37:07.000Z</published>
+    <updated>2019-07-04T14:47:43.643Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://img.v2gr.com/2019/07/lazhu.jpg" alt="蜡烛"></p><blockquote><p>我胡汉三又回来了！</p></blockquote><p>其实呢，早在一个月前，我就有不停优化和改善我这博客，包括<code>Hexo NexT</code>主题修改，利用<code>CloudXNS</code>智能解析<code>Coding pages</code>和<code>Github pages</code>增加静态网站托管稳定和百度收录，全站HTTPS，图片托管七牛云，但不限于这些。</p><p>算算，差不多四年没更新博客了，一是没时间，重要的一点自己也没花心思在上面。现在写博客的越来越少了，静下来看博客更少了，大部分都是刷刷抖音，朋友圈居多，我也是其中一位哈。</p><p>四年，发生了很多，我也再也不是我。</p><p>嗯，我不再做技术了，头发倒还是继续掉。</p><p>2019，很特殊的一年，我终于告别了单身，我恋爱啦！</p><p>2019，也是很悲伤的一年，今天我一位至亲离开了，愿天堂没有疾病痛苦。</p><p>四年，我还是我。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://img.v2gr.com/2019/07/lazhu.jpg&quot; alt=&quot;蜡烛&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我胡汉三又回来了！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实呢，早在一个月前，我就有不停优化和改善我这博客，
+      
+    
+    </summary>
+    
+      <category term="生活随笔" scheme="https://wwww.arao.me/categories/life/"/>
+    
+    
+      <category term="github" scheme="https://wwww.arao.me/tags/github/"/>
+    
+      <category term="NexT主题" scheme="https://wwww.arao.me/tags/NexT%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="hexo" scheme="https://wwww.arao.me/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>三步让你的网站支持简体繁体切换</title>
@@ -90,9 +123,9 @@
     
       <category term="hexo" scheme="https://wwww.arao.me/tags/hexo/"/>
     
-      <category term="多说" scheme="https://wwww.arao.me/tags/%E5%A4%9A%E8%AF%B4/"/>
-    
       <category term="七牛云存储" scheme="https://wwww.arao.me/tags/%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8/"/>
+    
+      <category term="多说" scheme="https://wwww.arao.me/tags/%E5%A4%9A%E8%AF%B4/"/>
     
   </entry>
   
@@ -147,11 +180,11 @@
     
       <category term="hexo" scheme="https://wwww.arao.me/tags/hexo/"/>
     
+      <category term="多说" scheme="https://wwww.arao.me/tags/%E5%A4%9A%E8%AF%B4/"/>
+    
       <category term="hexo最近访客" scheme="https://wwww.arao.me/tags/hexo%E6%9C%80%E8%BF%91%E8%AE%BF%E5%AE%A2/"/>
     
       <category term="typecho" scheme="https://wwww.arao.me/tags/typecho/"/>
-    
-      <category term="多说" scheme="https://wwww.arao.me/tags/%E5%A4%9A%E8%AF%B4/"/>
     
   </entry>
   

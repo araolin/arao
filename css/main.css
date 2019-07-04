@@ -1774,7 +1774,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffa718;
+  background: #04d03c;
 }
 .feed-link,
 .chat {
@@ -2937,4 +2937,11 @@ code {
 }
 .highlight:hover .btn-copy {
   opacity: 1;
+}
+.page-post-detail .comments {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
 }

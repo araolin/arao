@@ -308,7 +308,7 @@
 
     
 
-    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>留言</a>
+    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>留言</a>
 
   </li>
 
@@ -465,6 +465,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/life/long-lost-updates.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/life/long-lost-updates.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -685,6 +698,19 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/website/hexo-support-jian-fan-language.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/website/hexo-support-jian-fan-language.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -903,6 +929,19 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/website/github-pages-araome-301-www.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/website/github-pages-araome-301-www.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1117,6 +1156,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/website/make-duoshuo-faster-qiniu-cdn.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/website/make-duoshuo-faster-qiniu-cdn.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1333,6 +1385,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/website/hexo-optimize-pic-lazyload.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/website/hexo-optimize-pic-lazyload.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1803,6 +1868,36 @@
   
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'afPtPDkFefxA0d0UDXxIHVwC-gzGzoHsz',
+    appKey: 'b0EAfJwelD8B1jjEw2OPGukl',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
 
 
 

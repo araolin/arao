@@ -307,7 +307,7 @@
 
     
 
-    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>留言</a>
+    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>留言</a>
 
   </li>
 
@@ -809,6 +809,36 @@
   
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'afPtPDkFefxA0d0UDXxIHVwC-gzGzoHsz',
+    appKey: 'b0EAfJwelD8B1jjEw2OPGukl',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
 
 
 
